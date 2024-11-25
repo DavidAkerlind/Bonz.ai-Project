@@ -60,15 +60,15 @@ Initial setup and project planning.
 
 ### 2024-11-23
 
--   doc
--   doc
+-   Made HTML for lanign page
+-   Styled the nav for fullscreen and startde on the hamburger nav
 
 ---
 
 ## Next Steps
 
-1. test
-2. test
+1. Style hamburger nav done
+2. begin style the rest
 
 ---
 
