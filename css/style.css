@@ -8,8 +8,8 @@ Last updated: 2024-11-24
 Version: 1.0
 
     1. Font import
-    2. Reset / Normalize
-    3. Variables
+    2. Variables
+    3. Reset / Normalize
 
     4. Basic styling
 
@@ -35,8 +35,58 @@ Version: 1.0
 
 */
 
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400&family=Lora:wght@400&display=swap");
+
+/* Variables Section */
+:root {
+    --font-primary: "Poppins", sans-serif; /* Normal text */
+    --font-cabin: "Lora", serif; /* Rustic, calm feel for main h1 */
+    --color-primary: #fff;
+    --color-secondary: #ddd;
+    --color-accent-gold: #bf9766;
+    --color-dark: #333;
+    --color-dark-overlay: rgba(0, 0, 0, 0.5);
+    --color-navbar: rgba(0, 0, 0, 0.3);
+    --color-dropdown: rgba(0, 0, 0, 0.8);
+    --spacing: 20px;
+    --radius: 8px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --transition-speed: 0.3s;
+}
+
+/* Reset / Normalize */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  Basic styling */
+
+.wrapper {
+    width: 100vh;
+}
+
+/* Block - Vertical Line */
+.vertical-line {
+    width: 2px;
+    background-color: var(--color-accent-gold);
+    height: 100%;
+    display: inline-block;
+}
+
+/* Modifier - White */
+.vertical-line--white {
+    background-color: var(--color-primary);
 }

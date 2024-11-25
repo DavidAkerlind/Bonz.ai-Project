@@ -3,8 +3,355 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bonz.ai - first page</title>
+        <title>Bonz.ai - Landing page</title>
         <link rel="stylesheet" href="./css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet" />
     </head>
-    <body></body>
+    <body>
+        <div class="wrapper">
+            <!-- Header / Hero Section -->
+            <header class="header">
+                <!--  Navbar -->
+                <nav class="navbar">
+                    <figure class="navbar__logo-container">
+                        <img
+                            class="navbar__img"
+                            src="./bonzai-assets/assets/logo/bonz.ai-logo-black-symbol.png"
+                            alt="bonzai logo" />
+                    </figure>
+                </nav>
+                <ul>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link navbar__link--active"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a href="./about.html" class="navbar__link">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Services</a>
+                    </li>
+                    <li class="navbar__item navbar__item--has-dropdown">
+                        <a href="#" class="navbar__link">Cabins</a>
+                        <ul class="navbar__dropdown">
+                            <li class="navbar__dropdown-item">
+                                <a href="#" class="navbar__dropdown-linl"
+                                    >Mountain</a
+                                >
+                            </li>
+                            <li class="navbar__dropdown-item">
+                                <a href="" class="navbar__dropdown-linl"
+                                    >Lake</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Contact us</a>
+                    </li>
+                </ul>
+                <!-- Hero Content -->
+                <article class="hero">
+                    <span class="verticle-line verticle-line--white"></span>
+                    <figure class="hero__logo-figure">
+                        <img
+                            src="./bonzai-assets/assets/logo/bonz.ai-logo-black-symbol.png"
+                            alt="bonzai logo with text: ai driven eko living" />
+                    </figure>
+                    <h1>BONZ.AI</h1>
+                    <h2 class="hero__sub-title">
+                        A Haven for the <br />Mind and Soul
+                    </h2>
+                    <button class="button button--hero">
+                        BOOK YOUR GETAWAY
+                    </button>
+                </article>
+            </header>
+
+            <!--  Booking widget section -->
+
+            <section class="booking-widget">
+                <form class="booking-widget__form" action="#">
+                    <section class="booking-widget__details">
+                        <input
+                            class="booking-widget__input booking-widget__input--location"
+                            type="text"
+                            id="location"
+                            placeholder="Lofoten, Norway" />
+                        <button class="button button--search-location">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </section>
+
+                    <section class="booking-widget__details">
+                        <label for="check-in" class="booking-widget__label"
+                            >Check In</label
+                        >
+                        <input
+                            required
+                            type="date"
+                            id="check-in"
+                            class="booking-widget__input booking-widget__input--check-in" />
+
+                        <label for="check-out" class="booking-widget__label"
+                            >Check Out</label
+                        >
+                        <input
+                            required
+                            type="date"
+                            id="check-out"
+                            class="booking-widget__input booking-widget__input--check-out" />
+                    </section>
+
+                    <section
+                        class="booking-widget__details booking-widget__details--guest-selection">
+                        <label for="guests" class="booking-widget__label"
+                            >Guests</label
+                        >
+                        <select
+                            required
+                            id="guests"
+                            class="booking-widget__input booking-widget__input--guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </section>
+                    <button class="button button--search-room">
+                        Search
+                        <i
+                            ><img
+                                src="./bonzai-assets/assets/pil-right.svg"
+                                alt=""
+                        /></i>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Main content section -->
+            <main class="main-content">
+                <h2 class="main-content__title">RELAX & EXIST AT BONZ.AI</h2>
+
+                <section class="main-content__grid-section">
+                    <section class="grid-section__card">
+                        <figure class="card__bg-container">
+                            <h3 class="card__title">Locations</h3>
+                        </figure>
+                        <article class="card__info">
+                            <h4 class="card__sub-title">Places to be</h4>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Animi eos voluptatum aut
+                                molestias explicabo quibusdam cupiditate
+                                debitis, voluptate recusandae laboriosam odio.
+                            </p>
+                            <button class="button button--card">
+                                WHERE AT
+                            </button>
+                        </article>
+                    </section>
+                    <section class="grid-section__card">
+                        <figure class="card__bg-container">
+                            <h3 class="card__title">SWIM</h3>
+                        </figure>
+                        <article class="card__info">
+                            <h4 class="card__sub-title">Take a dip</h4>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Animi eos voluptatum aut
+                                molestias explicabo quibusdam cupiditate
+                                debitis, voluptate recusandae laboriosam odio.
+                            </p>
+                            <button class="button button--card">HOP IN</button>
+                        </article>
+                    </section>
+                    <section class="grid-section__card">
+                        <figure class="card__bg-container">
+                            <h3 class="card__title">NATURE</h3>
+                        </figure>
+                        <article class="card__info">
+                            <h4 class="card__sub-title">Be close, be here</h4>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Animi eos voluptatum aut
+                                molestias explicabo quibusdam cupiditate
+                                debitis, voluptate recusandae laboriosam odio.
+                            </p>
+                            <button class="button button--card">EXPLORE</button>
+                        </article>
+                    </section>
+                    <section class="grid-section__card grid-section__card--big">
+                        <figure class="card__bg-container--right"></figure>
+                        <article class="card__info card__info--left">
+                            <h3 class="card__title--big">
+                                Bonz.AI Resort. You are here now
+                            </h3>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Animi eos voluptatum aut
+                                molestias explicabo quibusdam cupiditate
+                                debitis, voluptate recusandae laboriosam odio
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Reprehenderit voluptas facere
+                                nesciunt odio, mollitia laudantium facilis vel
+                                ipsum architecto nisi distinctio ratione, id
+                                quia et, consequuntur dolores eveniet doloribus
+                                repellendus optio sapiente magni velit commodi
+                                sed aperiam! Quaerat, autem minima commodi
+                                eveniet ducimus fugit voluptates libero velit
+                                iusto accusamus! Placeat.
+                            </p>
+                            <button class="button button--card">
+                                BOOK NOW
+                            </button>
+                        </article>
+                    </section>
+                </section>
+                <section class="main-content__small-info">
+                    <h2 class="main-content__title"></h2>
+                    <section class="main-content__grid-section">
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">13</h3>
+                            <p class="info-box__number-info">locations</p>
+                        </article>
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">24</h3>
+                            <p class="info-box__number-info">cabins</p>
+                        </article>
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">2</h3>
+                            <p class="info-box__number-info">restaurants</p>
+                        </article>
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">1</h3>
+                            <p class="info-box__number-info">gym</p>
+                        </article>
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">4</h3>
+                            <p class="info-box__number-info">spa rooms</p>
+                        </article>
+                        <article class="grid-section__info-box">
+                            <h3 class="info-box__number-title">2</h3>
+                            <p class="info-box__number-info">paddle corts</p>
+                        </article>
+                    </section>
+                </section>
+
+                <!-- Footer section -->
+            </main>
+            <footer class="footer">
+                <!-- Contact Info Section -->
+                <section class="footer__contact-info">
+                    <h2 class="footer__title">Get in touch</h2>
+                    <ul class="footer__contact-list">
+                        <li class="footer__contact-item">Bonz.ai AB</li>
+                        <li class="footer__contact-item">Lorem, ipsum.</li>
+                        <li class="footer__contact-item">190 12 Lofoten</li>
+                        <li class="footer__contact-item">Org.nr 123412-1232</li>
+                        <li class="footer__contact-item">
+                            Phone:
+                            <a
+                                href="tel:+1234567890"
+                                class="footer__contact-link"
+                                >+1234567890</a
+                            >
+                        </li>
+                        <li class="footer__contact-item">
+                            Email:
+                            <a
+                                href="mailto:contact@yourcompany.com"
+                                class="footer__contact-link"
+                                >contact@yourcompany.com</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- Social Media Links -->
+                    <ul class="footer__contact-list footer__contact-list--row">
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <img
+                                    class="footer__social-icon"
+                                    src="./bonzai-assets/assets/Group.svg"
+                                    alt="Link to our X (Twitter)" />
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <img
+                                    class="footer__social-icon"
+                                    src="./bonzai-assets/assets/Groupfacebook.svg"
+                                    alt="Link to our Facebook" />
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <img
+                                    class="footer__social-icon"
+                                    src="./bonzai-assets/assets/Groupinsta.svg"
+                                    alt="Link to our Instagram" />
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <img
+                                    class="footer__social-icon"
+                                    src="./bonzai-assets/assets/Grouppintrest.svg"
+                                    alt="Link to our Pinterest" />
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Newsletter Section -->
+                <section class="footer__newsletter">
+                    <h2 class="footer__title">Join Our Newsletter</h2>
+                    <p class="footer__newsletter-description">
+                        Stay updated with the latest news and offers.
+                    </p>
+
+                    <form class="footer__newsletter-form">
+                        <label for="email" class="footer__newsletter-label"
+                            >Enter your email:</label
+                        >
+                        <input
+                            class="footer__newsletter-input"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your-email@example.com"
+                            required />
+                        <button class="button" type="submit">
+                            GET ON THE LIST
+                        </button>
+                    </form>
+
+                    <p class="footer__newsletter-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus auctor dui quis turpis ullamcorper, vel aliquet
+                        risus convallis. Curabitur sed augue felis. Integer ac
+                        magna at ligula gravida mollis. Integer laoreet augue
+                        eget sapien vehicula, ac malesuada metus iaculis.
+                    </p>
+                </section>
+
+                <!-- Follow Section -->
+                <section class="footer__follow">
+                    <h2 class="footer__title">Hang With Us</h2>
+                    <figure class="footer__follow-img-container">
+                        <img
+                            class="footer__follow-img"
+                            src="./bonzai-assets/assets/photos/ec22d5c1-6fc9-439c-9f84-88e40587be92.jpg"
+                            alt="Two A-frame cabins in a mountain range credit: deepai" />
+                    </figure>
+
+                    <button class="button">Follow Us</button>
+                </section>
+            </footer>
+        </div>
+    </body>
 </html>
