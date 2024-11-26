@@ -45,7 +45,9 @@ Version: 1.0
     --color-primary: #fff;
     --color-secondary: #ddd;
     --color-accent: #02594e;
+    --color-light: #4b4b4b;
     --color-dark: #333;
+    --color-darker: #202020;
     --color-dark-overlay: rgba(0, 0, 0, 0.5);
     --color-navbar: rgba(0, 0, 0, 0.3);
     --color-dropdown: rgba(0, 0, 0, 0.8);
@@ -115,8 +117,9 @@ h4 {
 
 .button {
     padding: 0.8rem 1.5rem;
-    z-index: 9990;
+    z-index: 1;
     transition: all 0.3s ease; /* Add transition for background color and border */
+    letter-spacing: 0.4ch;
 }
 
 .button:hover,
@@ -125,7 +128,7 @@ h4 {
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 /* ======================================= */
@@ -187,7 +190,7 @@ h4 {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 9998;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     font-weight: 400;
     color: var(--color-dark);
 }
@@ -436,12 +439,11 @@ h4 {
 /* ===== HERO section ====== */
 
 .hero {
-    /* filter: brightness(50%); */
     background-image: url(/bonzai-assets/assets/photos/sekwang-chia-WRQk1q2EMwE-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 10rem 0;
+    padding: 10rem 0 7rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,7 +455,7 @@ h4 {
 .hero__title {
     font-size: 4rem;
     font-weight: 200;
-    z-index: 9990;
+
     margin: 1rem 0 3rem 0;
     letter-spacing: 0.6ch;
 }
@@ -461,11 +463,9 @@ h4 {
 .hero__img,
 .hero__logo-figure {
     max-width: 15rem;
-    z-index: 9990;
 }
 
 .hero__sub-title {
-    z-index: 9990;
     text-align: center;
     font-size: 1.3rem;
     font-weight: 200;
@@ -473,7 +473,7 @@ h4 {
     margin-bottom: 1rem;
 }
 
-/*  Button is styled here and in the basic styling also */
+/*  Button is styled in the basic styling also */
 
 .main-content {
     display: flex;
@@ -482,13 +482,133 @@ h4 {
     justify-content: center;
 }
 
+/* ====== Booking widget ====== */
+/* Main Widget Container */
 .main-content__booking-widget {
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    margin-top: -80px; /* Adjust this value as needed */
-    position: relative; /* Ensures it stays within the flow of the document */
-    z-index: 1; /* To ensure it sits above any background */
-    grid-template-rows: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    margin-top: -2.5rem;
+    position: relative;
+    padding-inline: 1.5rem;
+    max-width: 70vw;
+    width: 100%;
+    color: var(--color-darker);
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+/* Form */
+.booking-widget__form {
+    box-shadow: var(--shadow);
+    border-radius: 2px;
+    padding: 1rem;
+    background-color: var(--color-darker);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Sections within the widget */
+.booking-widget__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 4;
+    min-height: 0;
+}
+
+/* Text Fields and Dropdown */
+.booking-widget__input {
+    background-color: var(--color-primary);
+    color: var(--color-darker);
+    border: 2px solid #444;
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: var(--font-primary);
+    min-height: 46px;
+}
+
+.booking-widget__input:hover {
+    cursor: pointer;
+}
+
+/* Labels */
+.booking-widget__label {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+
+.booking-widget__label--hidden {
+    display: none;
+}
+
+/* Search Container */
+.booking-widget__search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Input Field with Location */
+.booking-widget__input--location {
+    width: 100%;
+    padding-left: 2.8rem; /* Space for the search icon */
+    color: var(--color-darker);
+}
+
+/* Search Button Inside Input */
+.button--search-location {
+    position: absolute;
+    padding: 0.6rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-darker);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button--search-location:hover,
+.button--search-location:focus {
+    transition: none;
+}
+
+/* Icon in Search Button */
+.button--search-location i {
+    font-size: 1.2rem;
+}
+
+.button--search-cabin {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+    border-radius: 2px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: var(--color-primary);
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:focus {
+    background-color: var(--color-accent);
 }
 
 @media screen and (max-width: 990px) {

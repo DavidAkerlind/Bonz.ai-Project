@@ -223,47 +223,48 @@
                 <!--  Booking widget section -->
 
                 <section class="main-content__booking-widget">
-                    <form class="booking-widget__form" action="#">
-                        <section class="booking-widget__details">
-                            <label for="location" class="booking-widget__label"
+                    <form class="booking-widget__form" action="#" role="form">
+                        <section
+                            class="booking-widget__details booking-widget__details--span-2 booking-widget__details--search-bar">
+                            <label
+                                for="location"
+                                class="booking-widget__label booking-widget__label--hidden"
                                 >Location</label
                             >
-                            <input
-                                class="booking-widget__input booking-widget__input--location"
-                                type="text"
-                                id="location"
-                                placeholder="Lofoten, Norway"
-                                aria-label="Enter your location" />
-                            <button
-                                class="button button--search-location"
-                                aria-label="Search for location">
-                                <i class="fas fa-search"></i>
-                            </button>
+                            <section class="booking-widget__search-container">
+                                <button
+                                    class="button button--search-location"
+                                    aria-label="Search for location">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <input
+                                    class="booking-widget__input booking-widget__input--location"
+                                    type="text"
+                                    id="location"
+                                    placeholder="Location"
+                                    aria-label="Enter a location" />
+                            </section>
                         </section>
 
-                        <section class="booking-widget__details">
-                            <label for="check-in" class="booking-widget__label"
+                        <section
+                            class="booking-widget__details booking-widget__details--span-1">
+                            <label
+                                for="check-in-out"
+                                class="booking-widget__label booking-widget__label--hidden"
                                 >Check In</label
                             >
                             <input
                                 required
                                 type="date"
-                                id="check-in"
-                                class="booking-widget__input booking-widget__input--check-in" />
-
-                            <label for="check-out" class="booking-widget__label"
-                                >Check Out</label
-                            >
-                            <input
-                                required
-                                type="date"
-                                id="check-out"
-                                class="booking-widget__input booking-widget__input--check-out" />
+                                id="check-in-out"
+                                class="booking-widget__input booking-widget__input--check-in-out" />
                         </section>
 
                         <section
-                            class="booking-widget__details booking-widget__details--guest-selection">
-                            <label for="guests" class="booking-widget__label"
+                            class="booking-widget__details booking-widget__details--span-1">
+                            <label
+                                for="guests"
+                                class="booking-widget__label booking-widget__label--hidden"
                                 >Guests</label
                             >
                             <select
@@ -276,16 +277,14 @@
                                 <option value="4">4 Guests</option>
                             </select>
                         </section>
-                        <button
-                            class="button button--search-cabin"
-                            aria-label="Search rooms">
-                            Search
-                            <i
-                                ><img
-                                    src="./bonzai-assets/assets/pil-right.svg"
-                                    alt="arrow icon"
-                            /></i>
-                        </button>
+                        <section
+                            class="booking-widget__details booking-widget__details--span-2">
+                            <button
+                                class="button button--search-cabin"
+                                aria-label="Search rooms">
+                                SEARCH <i class="fas fa-chevron-right"> </i>
+                            </button>
+                        </section>
                     </form>
                 </section>
 
