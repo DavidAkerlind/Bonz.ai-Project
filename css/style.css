@@ -23,7 +23,7 @@ Version: 1.0
 
     2.1. My Page Styling
     2.2. Header Component - My Pages
-    2.3. Form - My Pages 
+    2.3. Form - My Pages
     2.4. Planed Plants Grid - My pages
     2.5 Footer section - Mypages
 
@@ -31,7 +31,7 @@ Version: 1.0
     3.2 Media Queries Standard
     3.3 Media Queries - My Pages
 
-    
+
 
 */
 
@@ -612,6 +612,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 }
 
 @media screen and (max-width: 990px) {
+    .wrapper {
+        overflow-x: hidden;
+    }
+
     .navbar {
         display: none;
     }
