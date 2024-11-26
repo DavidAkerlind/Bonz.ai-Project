@@ -284,7 +284,7 @@ h4 {
     width: 100%;
     height: 100%;
     background-color: #333333cb;
-    background-image: url(/bonzai-assets/assets/photos/68407d03-a726-414d-ab04-c167ad596ac1.jpg);
+    background-image: url(https://unsplash.com/photos/brown-wooden-house-on-lake-near-mountain-WRQk1q2EMwE);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -439,11 +439,11 @@ h4 {
 /* ===== HERO section ====== */
 
 .hero {
-    background-image: url(/bonzai-assets/assets/photos/sekwang-chia-WRQk1q2EMwE-unsplash.jpg);
+    background-image: url(/bonzai-assets/assets/photos/05-night.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 10rem 0 7rem 0;
+    padding: 8rem 0 7rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
