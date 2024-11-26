@@ -14,7 +14,7 @@
     </head>
     <body>
         <aside class="skip-link">
-            <a href="#main-content" class="skip-link__button" focusable
+            <a href="#skip-to-here" class="skip-link__button" focusable
                 >Skip to main content</a
             >
         </aside>
@@ -95,10 +95,14 @@
                     id="menu-toggle"
                     aria-hidden="true" />
                 <label
+                    tabindex="0"
                     class="menu__button"
                     for="menu-toggle"
-                    aria-label="Toggle navigation menu">
+                    aria-label="Toggle navigation menu"
+                    role="button"
+                    aria-expanded="true">
                     <span class="menu__button-line"></span>
+                    <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD -->
                 </label>
 
                 <!-- Navigation Burger Menu -->
@@ -150,20 +154,21 @@
                             <a
                                 class="menu__link"
                                 href="#"
-                                aria-label=""
+                                aria
                                 aria-haspopup="true"
                                 aria-expanded="false"
-                                aria-controls="cabins-dropdown"
+                                aria-label="menu-cabins-dropdown"
+                                aria-controls="menu-cabins-dropdown"
                                 role="button">
                                 <i
-                                    aria-label="Toggle cabins-dropdown"
+                                    aria-label="Toggle cabins-dropdown burger menu"
                                     class="fas fa-chevron-down"></i>
                                 CABINS
                             </a>
                             <ul
-                                id="cabins-dropdown"
+                                id="menu-cabins-dropdown"
                                 class="menu__dropdown"
-                                aria-labelledby="cabins-dropdown">
+                                aria-labelledby="menu-cabins-dropdown">
                                 <li class="menu__item menu__item--dropdown">
                                     <a
                                         href="#"
@@ -192,19 +197,21 @@
                 </nav>
 
                 <!-- Hero Content -->
-                <article class="hero">
-                    <span class="verticle-line verticle-line--white"></span>
+                <article
+                    class="hero"
+                    alt="background picture credit: Sekwang Chia">
+                    <!-- <span class="vertical-line vertical-line--white"></span> -->
+                    <h2 class="hero__sub-title">A HEAVEN FOR MIND AND SOUL</h2>
                     <figure class="hero__logo-figure">
                         <img
-                            src="./bonzai-assets/assets/logo/bonz.ai-logo-black-symbol.png"
+                            class="hero__img"
+                            src="./bonzai-assets/assets/logo/bonz.ai-logo-white-symbol.png"
                             alt="bonzai logo with text: ai driven eko living" />
                     </figure>
-                    <h1>BONZ.AI</h1>
-                    <h2 id="main-content" class="hero__sub-title">
-                        A Haven for the <br />Mind and Soul
-                    </h2>
-                    <button class="button button--hero">
-                        BOOK YOUR GETAWAY
+                    <h1 class="hero__title">BONZ.AI</h1>
+
+                    <button id="skip-to-here" class="button button--hero">
+                        <i class="fas fa-arrow-right"></i> BOOK YOUR GETAWAY
                     </button>
                 </article>
             </header>

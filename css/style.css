@@ -44,7 +44,7 @@ Version: 1.0
     --font-cabin: "Lora", serif; /* Rustic, calm feel for main h1 */
     --color-primary: #fff;
     --color-secondary: #ddd;
-    --color-accent: #bf9766;
+    --color-accent: #02594e;
     --color-dark: #333;
     --color-dark-overlay: rgba(0, 0, 0, 0.5);
     --color-navbar: rgba(0, 0, 0, 0.3);
@@ -90,17 +90,42 @@ h4 {
     font-family: "Lora", serif;
 }
 
+/*  CHevrons and other font awesome icons are smaller */
+.fa-chevron-down {
+    transform: scaleY(0.7);
+}
+
+.fa-arrow-right {
+    margin-right: 1rem;
+}
+
 /* Block - Vertical Line */
 .vertical-line {
-    width: 2px;
+    width: 4px;
     background-color: var(--color-accent);
-    height: 100%;
-    display: inline-block;
+    height: 4rem;
+    transform: rotate(180deg);
+    z-index: 9990;
 }
 
 /* Modifier - White */
 .vertical-line--white {
     background-color: var(--color-primary);
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    z-index: 9990;
+    transition: all 0.3s ease; /* Add transition for background color and border */
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /* ======================================= */
@@ -117,7 +142,7 @@ h4 {
     transform: translateX(-50%);
     padding: 4rem;
     background-color: var(--color-accent);
-    color: var(--color-dark);
+    color: var(--color-primary);
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -163,7 +188,7 @@ h4 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 9998;
     padding: 1rem 2rem;
-    font-weight: 200;
+    font-weight: 400;
     color: var(--color-dark);
 }
 
@@ -198,18 +223,23 @@ h4 {
 
 .navbar__link--active {
     color: var(--color-accent);
-    font-weight: 400;
+    font-weight: 600;
 }
 
+/* Styling both on the fullpage cabins dropdown and on teh mobil version here */
+
 .navbar__item--has-dropdown:hover .navbar__dropdown,
-.navbar__item--has-dropdown:focus-within .navbar__dropdown {
+.navbar__item--has-dropdown:focus-within .navbar__dropdown,
+.menu__item--has-dropdown:hover .menu__dropdown,
+.menu__item--has-dropdown:focus-within .menu__dropdown {
     visibility: visible;
     opacity: 1;
     transform: translateY(0); /* Slide up into view */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.navbar__dropdown {
+.navbar__dropdown,
+.menu__dropdown {
     visibility: hidden;
     position: absolute;
     top: 100%;
@@ -221,27 +251,30 @@ h4 {
     transform: translateY(10px);
 }
 
-.navbar__dropdown-item {
+.navbar__dropdown-item,
+.menu__dropdown-item {
     padding: 1rem;
-    text-align: left;
     border-top: 1px solid #fff;
 }
 
-.navbar__link--dropdown {
+.navbar__link--dropdown,
+.menu__link--dropdown {
     display: block;
     padding: 1rem;
-    color: #333;
+    color: var(--color-primary);
 }
 
-.navbar__link--dropdown:hover {
-    background-color: #f0f0f0;
-    color: var(--color-dark);
+.navbar__link--dropdown:hover,
+.menu__link-dropdown:hover {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
     border: none;
     transition: none;
 }
 
 /* Navbar burgermenu  */
 .menu__navigation {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -255,7 +288,7 @@ h4 {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 9998;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     position: relative;
@@ -269,17 +302,20 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 900;
 }
 
 .menu__list {
     z-index: 9998;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 3rem;
     transition: color 0.3s ease;
+    width: 100vw;
+    gap: 2vh;
 }
 
 .menu__logo {
@@ -288,8 +324,9 @@ h4 {
 }
 
 .menu__link {
-    padding: 2rem;
-    font-weight: 200;
+    padding-inline: 2rem;
+    font-weight: 100;
+    width: 100%;
 }
 
 .menu__link--active {
@@ -298,32 +335,24 @@ h4 {
 }
 
 .menu__item:not(:first-child) .menu__link:hover {
-    border-right: 4px solid var(--color-accent);
+    border-bottom: 4px solid var(--color-accent);
 }
+
+/* ===Extra styling on the dropdown in the small menu */
 
 .menu__item--has-dropdown {
     position: relative; /* Make sure the dropdown is positioned correctly */
 }
 
 .menu__dropdown {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 100%; /* Position the dropdown below the parent item */
-    background-color: #444444;
-    padding: 1rem;
-    min-width: 10rem;
-    border-radius: 5px;
-    z-index: 9999;
+    left: 0%;
+    top: -100%;
 }
 
-.menu__item--has-dropdown:hover .menu__dropdown {
-    display: block; /* Show dropdown when hovering over the parent item */
-}
-
-.menu__item--dropdown {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
+.menu__link--dropdown:hover,
+.menu__link--dropdown:focus {
+    background-color: var(--color-secondary);
+    font-weight: 300;
 }
 
 /* Logo styling */
@@ -358,7 +387,7 @@ h4 {
     width: 100%;
     height: 4px;
     background-color: var(--color-dark);
-    box-shadow: 1px 2px 2px 1px rgba(19, 19, 19, 0.4);
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.829);
     position: relative;
     transition: all ease-in-out 0.5s;
 }
@@ -369,7 +398,7 @@ h4 {
     background-color: var(--color-dark);
     width: 100%;
     height: 4px;
-    box-shadow: 1px 2px 2px 1px rgba(19, 19, 19, 0.4);
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.829);
     content: "";
     position: absolute;
     transition: all ease-in-out 0.5s;
@@ -402,6 +431,64 @@ h4 {
     top: 0;
     box-shadow: none;
     background-color: #b93857;
+}
+
+/* ===== HERO section ====== */
+
+.hero {
+    /* filter: brightness(50%); */
+    background-image: url(/bonzai-assets/assets/photos/sekwang-chia-WRQk1q2EMwE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    color: var(--color-primary);
+}
+
+.hero__title {
+    font-size: 4rem;
+    font-weight: 200;
+    z-index: 9990;
+    margin: 1rem 0 3rem 0;
+    letter-spacing: 0.6ch;
+}
+
+.hero__img,
+.hero__logo-figure {
+    max-width: 15rem;
+    z-index: 9990;
+}
+
+.hero__sub-title {
+    z-index: 9990;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 1ch;
+    margin-bottom: 1rem;
+}
+
+/*  Button is styled here and in the basic styling also */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content__booking-widget {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    margin-top: -80px; /* Adjust this value as needed */
+    position: relative; /* Ensures it stays within the flow of the document */
+    z-index: 1; /* To ensure it sits above any background */
+    grid-template-rows: 1;
 }
 
 @media screen and (max-width: 990px) {
