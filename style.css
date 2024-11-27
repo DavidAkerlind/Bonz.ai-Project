@@ -853,4 +853,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     .card__bg-container--right {
         min-width: 100%;
     }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
