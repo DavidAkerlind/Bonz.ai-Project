@@ -290,7 +290,7 @@ h4 {
     width: 100%;
     height: 100%;
     background-color: #333333cb;
-    background-image: url("/assets/photos/07-night.jpg");
+    background-image: url("./assets/photos/07-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -452,7 +452,7 @@ h4 {
 /* ===== HERO section ====== */
 
 .hero {
-    background-image: url("/assets/photos/09-night.jpg");
+    background-image: url("./assets/photos/09-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -659,7 +659,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 
 .card__bg-container {
     position: relative;
-    background-image: url(/assets/photos/08-night.jpg);
+    background-image: url(./assets/photos/561d50a9-864a-4d58-877d-94978c74df3b.jpg);
     background-size: cover;
     background-position: center;
     min-height: 15rem;
@@ -677,17 +677,20 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     z-index: 1; /* Ensure the overlay is on top of the image */
 }
 .card__bg-container--swim {
-    background-image: url(/assets/photos/DALL·E\ 2024-11-27\ 09.50.36\ -\ A\ serene\ and\ picturesque\ scene\ showing\ a\ woman\ climbing\ down\ a\ swim\ ladder\ into\ a\ clear\,\ calm\ lake\ surrounded\ by\ mountains.\ The\ shot\ is\ taken\ from\ abo.webp);
+    background-image: url(./assets/photos/DALL·E\ 2024-11-27\ 09.50.36\ -\ A\ serene\ and\ picturesque\ scene\ showing\ a\ woman\ climbing\ down\ a\ swim\ ladder\ into\ a\ clear\,\ calm\ lake\ surrounded\ by\ mountains.\ The\ shot\ is\ taken\ from\ abo.webp);
 }
 
 .card__bg-container--nature {
-    background-image: url(/assets/photos/08-night.jpg);
+    background-image: url(./assets/photos/9cb4b153-4e87-4669-8b2c-1108443a5881.jpg);
 }
 
 .card__bg-container--right {
-    background-image: url(/assets/photos/04-night.jpg);
+    background-image: url(./assets/photos/c242a625-865c-4e46-b2cd-75970cd71988.jpg);
 
-    min-width: 25rem;
+    min-width: 40rem;
+}
+.card__bg-container--right::after {
+    content: none;
 }
 
 .card__title {
@@ -723,6 +726,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 .card__sub-title--big {
     font-size: 1.2rem;
     margin-left: 2rem;
+    line-height: 3ch;
 }
 
 .card__description {
@@ -758,6 +762,26 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 }
 
 /* ==== Footer section ===== */
+
+.footer {
+    margin-top: 6rem;
+    display: flex;
+    margin-inline: 4rem;
+    letter-spacing: normal;
+}
+
+.footer__contact-info {
+    min-height: 5rem;
+}
+
+.footer__title {
+    letter-spacing: 0.1ch;
+    margin-bottom: 1rem;
+}
+
+.footer___contact-list {
+}
+
 /* 
 1
 
