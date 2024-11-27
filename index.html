@@ -26,7 +26,7 @@
                     <a href="./index.html">
                         <figure class="navbar__logo-container">
                             <img
-                                class="navbar__img"
+                                class="navbar__logo"
                                 src="./assets/logo/bonz.ai-logo-black-symbol.png"
                                 alt="bonzai logo" />
                         </figure>
@@ -200,7 +200,6 @@
 
                 <!-- Hero Content -->
                 <article class="hero" alt="credit: deepai">
-                    <!-- <span class="vertical-line vertical-line--white"></span> -->
                     <h2 class="hero__sub-title">A HEAVEN FOR MIND AND SOUL</h2>
                     <figure class="hero__logo-figure">
                         <img
@@ -310,7 +309,7 @@
                                 adipisicing elit dolor!
                             </p>
                             <button
-                                class="button button--card"
+                                class="button button--bg-black"
                                 aria-label="Explore Locations">
                                 WHERE AT
                             </button>
@@ -329,7 +328,7 @@
                                 adipisicing elit dolor!
                             </p>
                             <button
-                                class="button button--card"
+                                class="button button--bg-black"
                                 aria-label="Link to nothing">
                                 HOP IN
                             </button>
@@ -347,7 +346,9 @@
                                 Lorem ipsum dolor sit amet consec tetur,
                                 adipisicing elit dolor!
                             </p>
-                            <button class="button button--card">EXPLORE</button>
+                            <button class="button button--bg-black">
+                                EXPLORE
+                            </button>
                         </article>
                     </section>
                     <section class="grid-section__card grid-section__card--big">
@@ -370,7 +371,7 @@
                                 dapibus. Pellentesque <br />
                                 habitant morbi tristique senectus et netus.
                             </p>
-                            <button class="button button--card">
+                            <button class="button button--bg-black">
                                 BOOK NOW
                             </button>
                         </article>
@@ -438,57 +439,69 @@
                             <a
                                 href="mailto:contact@yourcompany.com"
                                 class="footer__contact-link"
-                                >contact@yourcompany.com</a
+                                >contact@bonzai.com</a
                             >
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <ul
+                                class="footer__contact-list footer__contact-list--row">
+                                <li class="footer__social-item">
+                                    <a href="#" class="footer__social-link"
+                                        ><i
+                                            class="fab fa-twitter footer__social-icon"
+                                            alt="Link to our Pinterest"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="#" class="footer__social-link"
+                                        ><i
+                                            class="fab fa-facebook footer__social-icon"
+                                            alt="Link to our Facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="#" class="footer__social-link"
+                                        ><i
+                                            class="fab fa-instagram footer__social-icon"
+                                            alt="Link to our Instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="#" class="footer__social-link">
+                                        <i
+                                            class="fab fa-pinterest footer__social-icon"
+                                            alt="Link to our Pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <a class="footer__award-container" href="#">
+                                <img
+                                    class="footer__award-img"
+                                    src="./assets/photos/MUSE-Hotel-Awards-Logo-Black-1200x857.png"
+                                    alt="MUSE-Hotel-Awards Logo"
+                            /></a>
                         </li>
                     </ul>
 
                     <!-- Social Media Links -->
-                    <ul class="footer__contact-list footer__contact-list--row">
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <img
-                                    class="footer__social-icon"
-                                    src="./assets/icons/Group.svg"
-                                    alt="Link to our X (Twitter)" />
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <img
-                                    class="footer__social-icon"
-                                    src="./assets/icons/Groupfacebook.svg"
-                                    alt="Link to our Facebook" />
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <img
-                                    class="footer__social-icon"
-                                    src="./assets/icons/Groupinsta.svg"
-                                    alt="Link to our Instagram" />
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <img
-                                    class="footer__social-icon"
-                                    src="./assets/icons/Grouppintrest.svg"
-                                    alt="Link to our Pinterest" />
-                            </a>
-                        </li>
-                    </ul>
                 </section>
 
                 <!-- Newsletter Section -->
                 <section class="footer__newsletter">
-                    <h2 class="footer__title">Join Our Newsletter</h2>
+                    <h2 class="footer__title">Latest news and chill stuff</h2>
                     <p class="footer__newsletter-description">
-                        Stay updated with the latest news and offers.
+                        Stay connected! We will soon be available to cater to
+                        all your whimsically notions of fun.
                     </p>
 
                     <form class="footer__newsletter-form">
-                        <label for="email" class="footer__newsletter-label"
+                        <label
+                            for="email"
+                            class="footer__newsletter-label booking-widget__label--hidden"
                             >Enter your email:</label
                         >
                         <input
@@ -498,31 +511,35 @@
                             name="email"
                             placeholder="your-email@example.com"
                             required />
-                        <button class="button" type="submit">
+                        <button
+                            class="button button--bg-black button--wide"
+                            type="submit">
                             GET ON THE LIST
                         </button>
                     </form>
 
                     <p class="footer__newsletter-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus auctor dui quis turpis ullamcorper, vel aliquet
-                        risus convallis. Curabitur sed augue felis. Integer ac
-                        magna at ligula gravida mollis. Integer laoreet augue
-                        eget sapien vehicula, ac malesuada metus iaculis.
+                        Submit,” you consent to receiving newsletters via email.
+                        <br />
+                        You can unsubscribe anytime. Read here about how we
+                        handle your personal data and your rights, and find info
+                        on cookies here.
                     </p>
                 </section>
 
                 <!-- Follow Section -->
                 <section class="footer__follow">
-                    <h2 class="footer__title">Hang With Us</h2>
+                    <h2 class="footer__title">Hang with us</h2>
                     <figure class="footer__follow-img-container">
-                        <img
-                            class="footer__follow-img"
-                            src="./assets/photos/09a42897-af91-4d77-973e-affc7594a6af.jpg"
-                            alt="Two A-frame cabins in a mountain range credit: deepai" />
+                        <a href="https://instagram.com" target="_blank">
+                            <img
+                                class="footer__follow-img"
+                                src="./assets/photos/09a42897-af91-4d77-973e-affc7594a6af.jpg"
+                                alt="Two A-frame cabins in a mountain range credit: deepai"
+                        /></a>
                     </figure>
 
-                    <button class="button">Follow Us</button>
+                    <button class="button button--follow">FOLLOW US</button>
                 </section>
             </footer>
         </div>
