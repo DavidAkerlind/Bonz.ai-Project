@@ -439,7 +439,7 @@ h4 {
 /* ===== HERO section ====== */
 
 .hero {
-    background-image: url(/bonzai-assets/assets/photos/05-night.jpg);
+    background-image: url("/assets/photos/03-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
