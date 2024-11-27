@@ -51,6 +51,7 @@ Version: 1.0
     --color-dark-overlay: rgba(0, 0, 0, 0.5);
     --color-navbar: rgba(0, 0, 0, 0.3);
     --color-dropdown: rgba(0, 0, 0, 0.8);
+    --color-accent-light: #d2e7e3;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     --transition-speed: 0.3s;
 }
@@ -71,6 +72,7 @@ body {
     font-family: "Poppins", sans-serif;
     letter-spacing: 0.3ch;
     overflow-x: hidden;
+    text-align: center;
 }
 
 ul {
@@ -93,6 +95,7 @@ h2,
 h3,
 h4 {
     font-family: "Lora", serif;
+    font-weight: 200;
 }
 
 /*  CHevrons and other font awesome icons are smaller */
@@ -394,18 +397,19 @@ h4 {
     display: none;
 }
 
-.menu__button span {
+.menu__button-line {
     border-radius: 10px;
     width: 100%;
     height: 4px;
     background-color: var(--color-dark);
     box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.829);
     position: relative;
+    text-align: left;
     transition: all ease-in-out 0.5s;
 }
 
-.menu__button span::before,
-.menu__button span::after {
+.menu__button-line::before,
+.menu__button-line::after {
     border-radius: 10px;
     background-color: var(--color-dark);
     width: 100%;
@@ -471,7 +475,7 @@ h4 {
 
 .hero__img,
 .hero__logo-figure {
-    max-width: 15rem;
+    max-width: 12rem;
 }
 
 .hero__sub-title {
@@ -529,8 +533,6 @@ h4 {
     flex-direction: column;
     gap: 0.5rem;
     flex: 1;
-    min-width: 4;
-    min-height: 0;
 }
 
 /* Text Fields and Dropdown */
@@ -567,6 +569,7 @@ h4 {
     display: flex;
     align-items: center;
     width: 100%;
+    min-width: 10rem;
 }
 
 /* Input Field with Location */
@@ -610,15 +613,180 @@ h4 {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    color: var(--color-primary);
     cursor: pointer;
     background-color: var(--color-primary);
     border-radius: 2px;
     font-size: 1.4rem;
 }
+
 input[type="date"]::-webkit-calendar-picker-indicator:focus {
     background-color: var(--color-accent);
 }
+
+.main-content__title {
+    font-family: var(--font-poppins);
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 4rem 0 2rem 0;
+}
+
+/* ==== Main Content Grid Section ===== */
+
+.main-content__grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: auto auto;
+    margin-inline: 4rem;
+    gap: 2rem;
+    max-width: 100%;
+}
+
+.grid-section__card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-accent-light);
+    border-radius: 2px;
+}
+
+.grid-section__card--big {
+    grid-column: span 3;
+    text-align: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 25rem;
+}
+
+.card__bg-container {
+    position: relative;
+    background-image: url(/assets/photos/08-night.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 15rem;
+    border-radius: 2px;
+}
+
+.card__bg-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark filter with 50% opacity */
+    z-index: 1; /* Ensure the overlay is on top of the image */
+}
+.card__bg-container--swim {
+    background-image: url(/assets/photos/DALL·E\ 2024-11-27\ 09.50.36\ -\ A\ serene\ and\ picturesque\ scene\ showing\ a\ woman\ climbing\ down\ a\ swim\ ladder\ into\ a\ clear\,\ calm\ lake\ surrounded\ by\ mountains.\ The\ shot\ is\ taken\ from\ abo.webp);
+}
+
+.card__bg-container--nature {
+    background-image: url(/assets/photos/08-night.jpg);
+}
+
+.card__bg-container--right {
+    background-image: url(/assets/photos/04-night.jpg);
+
+    min-width: 25rem;
+}
+
+.card__title {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    letter-spacing: 0.3ch;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* .card__info {
+    display: flex;
+    flex-direction: column;
+
+
+} */
+
+.card__info--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card__sub-title {
+    font-size: 1rem;
+    color: var(--color-darker);
+    margin-top: 2rem;
+    font-weight: 400;
+}
+.card__sub-title--big {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+.card__description {
+    font-size: 0.7rem;
+    padding: 2rem 0 2rem 2rem;
+    max-width: 40rem;
+}
+.button--card {
+    margin: 0 2rem 2rem 2rem;
+    width: 50%;
+    color: var(--color-primary);
+    background-color: var(--color-darker);
+    border-color: transparent;
+}
+
+/* ==== Main Content Small Info ===== */
+
+.main-content__grid-section--more-gap {
+    gap: 6rem;
+}
+
+.grid-section__info-box--down {
+    margin: 2rem 0;
+}
+
+.info-box__number-title {
+    font-size: 4rem;
+}
+
+.info-box__number-info {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-accent-light);
+}
+
+/* ==== Footer section ===== */
+/* 
+1
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1*/
 
 @media screen and (max-width: 990px) {
     .wrapper {
@@ -651,5 +819,34 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
         background-position: center;
         transform: translateX(100%);
         transition: transform 0.5s ease-in-out;
+    }
+    .hero {
+        padding-top: 2rem;
+    }
+    .hero__img,
+    .hero__logo-figure {
+        max-width: 5rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+    .hero__sub-title {
+        font-size: 0.5rem;
+    }
+
+    .main-content__grid-section {
+        grid-template-columns: repeat(
+            1,
+            minmax(300px, 1fr)
+        ); /* 2 columns on medium screens */
+    }
+
+    .grid-section__card--big {
+        grid-column: span 1;
+    }
+
+    .card__bg-container--right {
+        min-width: 100%;
     }
 }
