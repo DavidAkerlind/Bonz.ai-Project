@@ -280,6 +280,7 @@ h4 {
     transition: transform 0.3s ease-in-out;
     z-index: 9998;
     justify-content: center;
+    overflow-y: auto;
 }
 
 /* Add an overlay using ::after */
@@ -300,7 +301,7 @@ h4 {
 }
 
 .menu__logo {
-    max-width: 10rem;
+    max-width: 6rem;
 }
 
 .menu__link {
@@ -391,6 +392,11 @@ h4 {
     top: 0;
     box-shadow: none;
     background-color: #b93857;
+}
+
+.menu__checkbox:checked ~ body {
+    overflow: hidden;
+    height: 100%;
 }
 
 /* ===== HERO section ====== */
@@ -490,7 +496,7 @@ h4 {
     font-family: var(--font-primary);
     min-height: 46px;
     max-width: 100%;
-    min-width: 120px;
+    min-width: 100px;
 }
 
 .booking-widget__input:hover {
@@ -537,11 +543,26 @@ h4 {
     font-size: 1rem;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator:focus,
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-    border: 2px solid #444;
-    border-radius: 2px;
+.flatpickr-calendar {
+    background-color: var(--color-accent);
+    border-radius: 2px !important;
+    min-width: 100px;
+}
+
+.flatpickr-day.selected {
+    background-color: #02594e !important;
+}
+.flatpickr-calendar .flatpickr-day:hover,
+.flatpickr-calendar .flatpickr-day:focus {
+    background-color: var(--color-accent-light); /* Light green hover effect */
     cursor: pointer;
+}
+
+/* Optional: Styling the month and year labels */
+.flatpickr-months,
+.flatpickr-current-month {
+    background-color: var(--color-accent);
+    color: var(--color-primary) !important;
 }
 
 .button--search-cabin {
@@ -717,7 +738,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .footer__contact-link {
     text-decoration: underline;
-    color: var(--color-accent);
+    color: var(--color-darker);
+    font-weight: 400;
 }
 
 .footer__contact-link:hover {

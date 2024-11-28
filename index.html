@@ -11,6 +11,9 @@
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
             rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     </head>
     <body>
         <a class="img-credit-link" href="http://www.freepik.com"
@@ -32,7 +35,7 @@
                             <img
                                 class="navbar__logo"
                                 src="./assets/logo/bonz.ai-logo-black-symbol.png"
-                                alt="bonzai logo" />
+                                alt="bonzai logo home" />
                         </figure>
                     </a>
                     <ul class="navbar__list">
@@ -102,7 +105,10 @@
                     class="menu__button"
                     for="menu-toggle"
                     aria-label="Toggle navigation menu">
-                    <span role="button" class="menu__button-line"></span>
+                    <span
+                        role="button"
+                        class="menu__button-line"
+                        aria-label="Open burger menu (mobile only)"></span>
                     <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD -->
                 </label>
 
@@ -220,17 +226,21 @@
 
                 <section class="main-content__booking-widget">
                     <h2 class="main-content__title--hidden">Booking widget</h2>
-                    <form class="booking-widget__form" action="#">
+                    <form
+                        class="booking-widget__form"
+                        action="#"
+                        id="Booking-widget-form">
                         <section
                             class="booking-widget__details booking-widget__search-container">
+                            <h2 class="main-content__title--hidden">
+                                Booking widget search location
+                            </h2>
                             <label
                                 for="location"
                                 class="booking-widget__label booking-widget__label--hidden"
                                 >Location</label
                             >
-                            <h2 class="main-content__title--hidden">
-                                Booking widget search location
-                            </h2>
+
                             <button
                                 class="button button--search-location"
                                 aria-label="Search for location">
@@ -258,6 +268,16 @@
                                 id="check-in-out"
                                 class="booking-widget__input booking-widget__input--check-in-out"
                                 placeholder="CHECK IN DATE" />
+
+                            <script
+                                id="check-in-out-extern"
+                                src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                            <script id="check-in-out-extern">
+                                flatpickr("#check-in-out", {
+                                    dateFormat: "d M Y",
+                                    minDate: "today",
+                                });
+                            </script>
                         </section>
 
                         <section class="booking-widget__details">
@@ -273,7 +293,7 @@
                                 class="booking-widget__input booking-widget__input--guests"
                                 aria-label="Select number of guests">
                                 <option value="" disabled selected>
-                                    SELECT NUMEBER OF GUESTS
+                                    SELECT GUESTS
                                 </option>
                                 <option value="1">1 GUEST</option>
                                 <option value="2">2 GUESTS</option>
