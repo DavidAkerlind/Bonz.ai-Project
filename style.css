@@ -742,7 +742,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transition: transform 0.3s ease;
 }
 
-.footer__social-icon:hover {
+.footer__social-icon:hover,
+.footer__follow-img:hover {
     transform: scale(1.2);
 }
 
@@ -787,9 +788,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     max-width: 15rem;
     margin-bottom: 1.5rem;
     transition: transform 1s ease-in-out;
-}
-.footer__follow-img:hover {
-    transform: scale(1.15);
 }
 
 /*
@@ -868,10 +866,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
 
     .main-content__grid-section {
-        grid-template-columns: repeat(
-            1,
-            minmax(300px, 1fr)
-        ); /* 2 columns on medium screens */
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
 
     .grid-section__card--big {
