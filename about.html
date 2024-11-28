@@ -3,8 +3,534 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>about - bonz.ai</title>
-        <link rel="stylesheet" href="./css/style.css" />
+        <title>About - Bonz.AI</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     </head>
-    <body></body>
+    <body>
+        <a class="img-credit-link" href="http://www.freepik.com"
+            >Designed by GarryKillian / Freepik</a
+        >
+
+        <aside class="skip-link">
+            <a href="#skip-to-here" class="skip-link__button"
+                >Skip to main content</a
+            >
+        </aside>
+        <div class="wrapper">
+            <!-- Header / Hero Sec  tion -->
+            <header class="header">
+                <!--  Navbar fullscreen -->
+                <nav class="navbar">
+                    <a href="./about.html">
+                        <figure class="navbar__logo-container">
+                            <img
+                                class="navbar__logo"
+                                src="./assets/logo/bonz.ai-logo-black-symbol.png"
+                                alt="bonzai logo home" />
+                        </figure>
+                    </a>
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="./index.html" class="navbar__link">HOME</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a
+                                href="./about.html"
+                                class="navbar__link navbar__link--active"
+                                >ABOUT</a
+                            >
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__link">SERVICES</a>
+                        </li>
+                        <li class="navbar__item navbar__item--has-dropdown">
+                            <a
+                                href="#"
+                                class="navbar__link"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                aria-controls="cabins-dropdown"
+                                aria-label="Toggle cabins-dropdown"
+                                role="button"
+                                >CABINS <i class="fas fa-chevron-down"></i
+                            ></a>
+
+                            <ul
+                                id="cabins-dropdown"
+                                class="navbar__dropdown"
+                                aria-labelledby="cabins-dropdown">
+                                <li class="navbar__item navbar__item--dropdown">
+                                    <a
+                                        href="#"
+                                        class="navbar__link navbar__link--dropdown"
+                                        >MOUNTAIN</a
+                                    >
+                                </li>
+                                <li class="navbar__item navbar__item--dropdown">
+                                    <a
+                                        href="#"
+                                        class="navbar__link navbar__link--dropdown"
+                                        >LAKE</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__link">CONTACT US</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--  Navbar Burger menu -->
+
+                <!-- Accessible Hamburger Menu -->
+                <input
+                    type="checkbox"
+                    class="menu__checkbox"
+                    id="menu-toggle"
+                    aria-hidden="true" />
+                <label
+                    tabindex="0"
+                    class="menu__button"
+                    for="menu-toggle"
+                    aria-label="Toggle navigation menu">
+                    <span
+                        role="button"
+                        class="menu__button-line"
+                        aria-label="Open burger menu (mobile only)"></span>
+                    <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD -->
+                </label>
+
+                <!-- Navigation Burger Menu -->
+                <nav
+                    class="menu__navigation"
+                    aria-label="Main Navigation"
+                    aria-expanded="false">
+                    <ul class="menu__list">
+                        <!-- Logo (if decorative, use aria-hidden) -->
+                        <li class="menu__item">
+                            <a
+                                aria-label="Back to home link"
+                                class="menu__link"
+                                href="./index.html">
+                                <img
+                                    aria-hidden="true"
+                                    class="menu__logo"
+                                    src="./assets/logo/bonz.ai-logo-white-symbol.png"
+                                    alt="bonz.ai logo"
+                            /></a>
+                        </li>
+                        <!-- Navigation Links -->
+                        <li class="menu__item">
+                            <a
+                                class="menu__link"
+                                href="./index.html"
+                                aria-label="Navigate to planner page">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                class="menu__link menu__link--active"
+                                href="./about.html"
+                                aria-label="Navigate to ABOUT">
+                                ABOUT
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                class="menu__link"
+                                href="#"
+                                aria-label="Navigate to SERVICES">
+                                SERVICES
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--has-dropdown">
+                            <a
+                                class="menu__link"
+                                href="#"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                aria-label="menu-cabins-dropdown"
+                                aria-controls="menu-cabins-dropdown"
+                                role="button">
+                                <i class="fas fa-chevron-down"></i>
+                                CABINS
+                            </a>
+                            <ul
+                                id="menu-cabins-dropdown"
+                                class="menu__dropdown"
+                                aria-labelledby="menu-cabins-dropdown">
+                                <li class="menu__item menu__item--dropdown">
+                                    <a
+                                        href="#"
+                                        class="menu__link menu__link--dropdown"
+                                        >MOUNTAIN</a
+                                    >
+                                </li>
+                                <li class="menu__item menu__item--dropdown">
+                                    <a
+                                        href="#"
+                                        class="menu__link menu__link--dropdown"
+                                        >LAKE</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                class="menu__link"
+                                href="#"
+                                aria-label="Navigate to tips page">
+                                CONTACT US
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Hero Content -->
+                <article class="hero">
+                    <h2 class="hero__sub-title">A HEAVEN FOR MIND AND SOUL</h2>
+                    <figure class="hero__logo-figure">
+                        <img
+                            class="hero__img"
+                            src="./assets/logo/bonz.ai-logo-white-symbol.png"
+                            alt="bonzai logo with text: ai driven eko living" />
+                    </figure>
+                    <h1 id="skip-to-here" class="hero__title">BONZ.AI</h1>
+
+                    <button class="button button--no-border">
+                        <i class="fas fa-arrow-right"></i> BOOK YOUR GETAWAY
+                    </button>
+                </article>
+            </header>
+
+            <!-- Main Content Small Info  -->
+            <section class="main-content__small-info">
+                <h2 class="main-content__title">ABOUT BONZ.AI</h2>
+                <section
+                    class="main-content__grid-section main-content__grid-section--more-gap">
+                    <article class="grid-section__info-box">
+                        <h3 class="info-box__number-title">13</h3>
+                        <p class="info-box__number-info">locations</p>
+                    </article>
+                    <article
+                        class="grid-section__info-box grid-section__info-box--down">
+                        <h3 class="info-box__number-title">24</h3>
+                        <p class="info-box__number-info">cabins</p>
+                    </article>
+                    <article class="grid-section__info-box">
+                        <h3 class="info-box__number-title">2</h3>
+                        <p class="info-box__number-info">restaurants</p>
+                    </article>
+                    <article class="grid-section__info-box">
+                        <h3 class="info-box__number-title">1</h3>
+                        <p class="info-box__number-info">gym</p>
+                    </article>
+                    <article
+                        class="grid-section__info-box grid-section__info-box--down">
+                        <h3 class="info-box__number-title">4</h3>
+                        <p class="info-box__number-info">spa rooms</p>
+                    </article>
+                    <article class="grid-section__info-box">
+                        <h3 class="info-box__number-title">2</h3>
+                        <p class="info-box__number-info">paddle corts</p>
+                    </article>
+                </section>
+            </section>
+            <!-- MAIN SECTION CHAT GPT  -->
+
+            <main class="main">
+                <!-- Hero Section -->
+                <section
+                    class="main__section main__section--hero"
+                    aria-label="Welcome to Bonz.ai">
+                    <div class="main__grid-section main__grid-section--hero">
+                        <header class="hero__header">
+                            <h1 class="hero__title">Welcome to Bonz.ai</h1>
+                            <p class="hero__description">
+                                The future hotel where sustainability meets
+                                smart technology to create the ultimate hotel
+                                experience. Here, AI-driven experiences combine
+                                with a green lifestyle.
+                            </p>
+                            <a
+                                href="./index.html"
+                                class="button button--bg-green"
+                                aria-label="Book your stay"
+                                >Book your stay</a
+                            >
+                        </header>
+                        <figure class="hero__image-container">
+                            <img
+                                src="path/to/your-image.jpg"
+                                alt="Bonz.ai Hotel"
+                                class="hero__image" />
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section
+                    class="main__section main__section--features"
+                    aria-label="Features of Bonz.ai">
+                    <div
+                        class="main__grid-section main__grid-section--features">
+                        <article class="feature__item">
+                            <figure class="feature__icon">
+                                <img
+                                    src="./assets/logo/bonz.ai-logo-black-portrait.png"
+                                    alt="AI Icon"
+                                    class="feature__icon-img" />
+                            </figure>
+                            <h3 class="feature__title">
+                                AI-Driven Experiences
+                            </h3>
+                            <p class="feature__description">
+                                Imagine a world where every aspect of your stay
+                                is tailored just for you through smart
+                                technology.
+                            </p>
+                        </article>
+                        <article class="feature__item">
+                            <figure class="feature__icon">
+                                <img
+                                    src="./assets/photos/c7ff69a5-7a97-49d6-8b58-720968df914f.jpg"
+                                    alt="Sustainability Icon"
+                                    class="feature__icon-img" />
+                            </figure>
+                            <h3 class="feature__title">Green Lifestyle</h3>
+                            <p class="feature__description">
+                                Our hotel is built on sustainability principles,
+                                with energy-efficient systems and eco-friendly
+                                solutions focused on nature.
+                            </p>
+                        </article>
+                        <article class="feature__item">
+                            <figure class="feature__icon">
+                                <img
+                                    src="./assets/photos/01-night.jpg"
+                                    alt="Innovative Icon"
+                                    class="feature__icon-img" />
+                            </figure>
+                            <h3 class="feature__title">
+                                Innovative Technologies
+                            </h3>
+                            <p class="feature__description">
+                                Experience the next generation of hotel stays
+                                with advanced technologies that make every visit
+                                unique and futuristic.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section
+                    class="main__section main__section--about"
+                    aria-label="About Bonz.ai">
+                    <div class="main__grid-section main__grid-section--about">
+                        <div class="about__text">
+                            <h2 class="about__title">Our Vision</h2>
+                            <p class="about__description">
+                                At Bonz.ai, we strive to be a leader in
+                                sustainable tourism, combining smart solutions
+                                with a passionate commitment to our planet. Our
+                                vision is to offer a hotel stay that is both
+                                technologically advanced and eco-friendly.
+                            </p>
+                        </div>
+                        <figure class="about__image-container">
+                            <img
+                                src="./assets/photos/08-day.jpg"
+                                alt="Bonz.ai Vision"
+                                class="about__image" />
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Call to Action Section -->
+                <section
+                    class="main__section main__section--cta"
+                    aria-label="Call to Action">
+                    <div class="cta__content">
+                        <h2 class="cta__title">
+                            Ready to experience the hotel of the future?
+                        </h2>
+                        <p class="cta__description">
+                            Book your stay now and experience how sustainability
+                            and smart technology can enhance your next trip.
+                            Choose Bonz.ai for a unique and eco-friendly
+                            experience!
+                        </p>
+                        <a
+                            href="#"
+                            class="button button--bg-black"
+                            aria-label="Book now"
+                            >Book Now</a
+                        >
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer section -->
+
+            <footer class="footer">
+                <!-- Contact Info Section -->
+                <section class="footer__contact-info">
+                    <h2 class="footer__title">Get in touch</h2>
+                    <ul class="footer__contact-list">
+                        <li class="footer__contact-item">Bonz.ai Group AB</li>
+                        <li class="footer__contact-item">Lorem, ipsum.</li>
+                        <li class="footer__contact-item">190 12 Lofoten</li>
+                        <li class="footer__contact-item">Org.nr 123412-1232</li>
+                        <li class="footer__contact-item">
+                            Phone:
+                            <a
+                                href="tel:+1234567890"
+                                class="footer__contact-link"
+                                >+1234567890</a
+                            >
+                        </li>
+                        <li class="footer__contact-item">
+                            Email:
+                            <a
+                                href="mailto:contact@yourcompany.com"
+                                class="footer__contact-link"
+                                >contact@bonzai.com</a
+                            >
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <ul
+                                class="footer__contact-list footer__contact-list--row">
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Facebook page">
+                                        <i
+                                            class="fab fa-facebook footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our X (previous Twitter) page">
+                                        <i
+                                            class="fab fa-twitter footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Instagram page">
+                                        <i
+                                            class="fab fa-instagram footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Pinterest page">
+                                        <i
+                                            class="fab fa-pinterest footer__social-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <a class="footer__award-container" href="#">
+                                <img
+                                    class="footer__award-img footer__social-icon"
+                                    src="./assets/photos/MUSE-Hotel-Awards-Logo-Black-1200x857.png"
+                                    alt="MUSE-Hotel-Awards Logo"
+                            /></a>
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <a
+                                class="footer__css-validation"
+                                href="http://jigsaw.w3.org/css-validator/check/referer">
+                                <img
+                                    class="footer__social-icon"
+                                    style="border: 0; width: 88px; height: 31px"
+                                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                                    alt="Valid CSS!" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Media Links -->
+                </section>
+
+                <!-- Newsletter Section -->
+                <section class="footer__newsletter">
+                    <h2 class="footer__title">Latest news and chill stuff</h2>
+                    <p class="footer__newsletter-description">
+                        Stay connected! We will soon be available to cater to
+                        all your whimsically notions of fun.
+                    </p>
+
+                    <form class="footer__newsletter-form">
+                        <label
+                            for="email"
+                            class="footer__newsletter-label booking-widget__label--hidden"
+                            aria-label="Enter your email"
+                            >Enter your email:</label
+                        >
+                        <input
+                            class="footer__newsletter-input"
+                            aria-label="Enter your email"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your-email@example.com"
+                            required />
+                        <button
+                            class="button button--bg-black button--wide"
+                            type="submit">
+                            GET ON THE LIST
+                        </button>
+                    </form>
+
+                    <p class="footer__newsletter-text">
+                        Submit,” you consent to receiving newsletters via email.
+                        <br />
+                        You can unsubscribe anytime. Read here about how we
+                        handle your personal data and your rights, and find info
+                        on cookies here.
+                    </p>
+                </section>
+
+                <!-- Follow Section -->
+                <section class="footer__follow">
+                    <h2 class="footer__title">Hang with us</h2>
+                    <figure class="footer__follow-img-container">
+                        <a href="https://instagram.com" target="_blank">
+                            <img
+                                class="footer__follow-img"
+                                src="./assets/photos/09a42897-af91-4d77-973e-affc7594a6af.jpg"
+                                alt="Two A-frame cabins in a mountain range credit: deepai"
+                        /></a>
+                    </figure>
+
+                    <button class="button button--no-border">FOLLOW US</button>
+                </section>
+            </footer>
+        </div>
+    </body>
 </html>
