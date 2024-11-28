@@ -13,8 +13,12 @@
             rel="stylesheet" />
     </head>
     <body>
+        <a class="img-credit-link" href="http://www.freepik.com"
+            >Designed by GarryKillian / Freepik</a
+        >
+
         <aside class="skip-link">
-            <a href="#skip-to-here" class="skip-link__button" focusable
+            <a href="#skip-to-here" class="skip-link__button"
                 >Skip to main content</a
             >
         </aside>
@@ -54,11 +58,9 @@
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 aria-controls="cabins-dropdown"
+                                aria-label="Toggle cabins-dropdown"
                                 role="button"
-                                >CABINS
-                                <i
-                                    aria-label="Toggle cabins-dropdown"
-                                    class="fas fa-chevron-down"></i
+                                >CABINS <i class="fas fa-chevron-down"></i
                             ></a>
 
                             <ul
@@ -99,18 +101,16 @@
                     tabindex="0"
                     class="menu__button"
                     for="menu-toggle"
-                    aria-label="Toggle navigation menu"
-                    role="button"
-                    aria-expanded="true">
-                    <span class="menu__button-line"></span>
+                    aria-label="Toggle navigation menu">
+                    <span role="button" class="menu__button-line"></span>
                     <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD -->
                 </label>
 
                 <!-- Navigation Burger Menu -->
                 <nav
                     class="menu__navigation"
-                    role="navigation"
-                    aria-label="Main Navigation">
+                    aria-label="Main Navigation"
+                    aria-expanded="false">
                     <ul class="menu__list">
                         <!-- Logo (if decorative, use aria-hidden) -->
                         <li class="menu__item">
@@ -156,15 +156,12 @@
                             <a
                                 class="menu__link"
                                 href="#"
-                                aria
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 aria-label="menu-cabins-dropdown"
                                 aria-controls="menu-cabins-dropdown"
                                 role="button">
-                                <i
-                                    aria-label="Toggle cabins-dropdown burger menu"
-                                    class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down"></i>
                                 CABINS
                             </a>
                             <ul
@@ -199,7 +196,7 @@
                 </nav>
 
                 <!-- Hero Content -->
-                <article class="hero" alt="credit: deepai">
+                <article class="hero">
                     <h2 class="hero__sub-title">A HEAVEN FOR MIND AND SOUL</h2>
                     <figure class="hero__logo-figure">
                         <img
@@ -207,9 +204,9 @@
                             src="./assets/logo/bonz.ai-logo-white-symbol.png"
                             alt="bonzai logo with text: ai driven eko living" />
                     </figure>
-                    <h1 class="hero__title">BONZ.AI</h1>
+                    <h1 id="skip-to-here" class="hero__title">BONZ.AI</h1>
 
-                    <button id="skip-to-here" class="button button--hero">
+                    <button class="button button--no-border">
                         <i class="fas fa-arrow-right"></i> BOOK YOUR GETAWAY
                     </button>
                 </article>
@@ -218,31 +215,33 @@
             <!--  Main content href link for tabbing -->
             <!-- Main content section -->
 
-            <main class="main-content" role="main">
+            <main class="main-content">
                 <!--  Booking widget section -->
 
                 <section class="main-content__booking-widget">
-                    <form class="booking-widget__form" action="#" role="form">
+                    <h2 class="main-content__title--hidden">Booking widget</h2>
+                    <form class="booking-widget__form" action="#">
                         <section
-                            class="booking-widget__details booking-widget__details--search-bar">
+                            class="booking-widget__details booking-widget__search-container">
                             <label
                                 for="location"
                                 class="booking-widget__label booking-widget__label--hidden"
                                 >Location</label
                             >
-                            <section class="booking-widget__search-container">
-                                <button
-                                    class="button button--search-location"
-                                    aria-label="Search for location">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                                <input
-                                    class="booking-widget__input booking-widget__input--location"
-                                    type="text"
-                                    id="location"
-                                    placeholder="Location"
-                                    aria-label="Enter a location" />
-                            </section>
+                            <h2 class="main-content__title--hidden">
+                                Booking widget search location
+                            </h2>
+                            <button
+                                class="button button--search-location"
+                                aria-label="Search for location">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <input
+                                class="booking-widget__input booking-widget__input--location"
+                                type="text"
+                                id="location"
+                                placeholder="Location"
+                                aria-label="Enter a location" />
                         </section>
 
                         <section class="booking-widget__details">
@@ -272,10 +271,13 @@
                                 id="guests"
                                 class="booking-widget__input booking-widget__input--guests"
                                 aria-label="Select number of guests">
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
+                                <option value="" disabled selected>
+                                    SELECT NUMEBER OF GUESTS
+                                </option>
+                                <option value="1">1 GUEST</option>
+                                <option value="2">2 GUESTS</option>
+                                <option value="3">3 GUESTS</option>
+                                <option value="4">4 GUESTS</option>
                             </select>
                         </section>
                         <section class="booking-widget__details">
@@ -298,15 +300,18 @@
                     <section class="grid-section__card">
                         <figure
                             class="card__bg-container"
-                            aria-label="Picture of location"
-                            alt="picture of A-frame cabins by a lake credit: deepai">
+                            aria-label="Picture of location">
+                            <figcaption class="card__caption-hidden">
+                                Picture of A-frame cabins by a lake. Photo
+                                credit: DeepAI.
+                            </figcaption>
                             <h3 class="card__title">LOCATIONS</h3>
                         </figure>
                         <article class="card__info">
                             <h4 class="card__sub-title">Places to be</h4>
                             <p class="card__description">
                                 Lorem ipsum dolor sit amet consec tetur,
-                                adipisicing elit dolor!
+                                adipisicing elit dolor! adipisicing elit dolor!
                             </p>
                             <button
                                 class="button button--bg-black"
@@ -315,17 +320,22 @@
                             </button>
                         </article>
                     </section>
+
                     <section class="grid-section__card">
                         <figure
                             class="card__bg-container card__bg-container--swim"
-                            alt="picture of someone taking a swim credit: deepai">
+                            aria-label="Picture of someone taking a swim">
+                            <figcaption class="card__caption-hidden">
+                                Picture of someone taking a swim. Photo credit:
+                                DeepAI.
+                            </figcaption>
                             <h3 class="card__title">SWIM</h3>
                         </figure>
                         <article class="card__info">
                             <h4 class="card__sub-title">Take a dip</h4>
                             <p class="card__description">
                                 Lorem ipsum dolor sit amet consec tetur,
-                                adipisicing elit dolor!
+                                adipisicing elit dolor! adipisicing elit dolor!
                             </p>
                             <button
                                 class="button button--bg-black"
@@ -334,23 +344,29 @@
                             </button>
                         </article>
                     </section>
+
                     <section class="grid-section__card">
                         <figure
                             class="card__bg-container card__bg-container--nature"
-                            alt="picture of porch in the mountains credit: deepai">
+                            aria-label="Picture of a porch in the mountains">
+                            <figcaption class="card__caption-hidden">
+                                Picture of a porch in the mountains. Photo
+                                credit: DeepAI.
+                            </figcaption>
                             <h3 class="card__title">NATURE</h3>
                         </figure>
                         <article class="card__info">
                             <h4 class="card__sub-title">Be close, be here</h4>
                             <p class="card__description">
                                 Lorem ipsum dolor sit amet consec tetur,
-                                adipisicing elit dolor!
+                                adipisicing elit dolor! adipisicing elit dolor!
                             </p>
                             <button class="button button--bg-black">
                                 EXPLORE
                             </button>
                         </article>
                     </section>
+
                     <section class="grid-section__card grid-section__card--big">
                         <article class="card__info card__info--left">
                             <h4 class="card__sub-title card__sub-title--big">
@@ -377,7 +393,12 @@
                         </article>
                         <figure
                             class="card__bg-container card__bg-container--right"
-                            alt="picture of bed in loft credit: deepai"></figure>
+                            aria-label="Picture of a bed in a loft">
+                            <figcaption class="card__caption-hidden">
+                                Picture of a bed in a loft. Photo credit:
+                                DeepAI.
+                            </figcaption>
+                        </figure>
                     </section>
                 </section>
 
@@ -447,31 +468,39 @@
                             <ul
                                 class="footer__contact-list footer__contact-list--row">
                                 <li class="footer__social-item">
-                                    <a href="#" class="footer__social-link"
-                                        ><i
-                                            class="fab fa-twitter footer__social-icon"
-                                            alt="Link to our X (previous Twitter)"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a href="#" class="footer__social-link"
-                                        ><i
-                                            class="fab fa-facebook footer__social-icon"
-                                            alt="Link to our Facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a href="#" class="footer__social-link"
-                                        ><i
-                                            class="fab fa-instagram footer__social-icon"
-                                            alt="Link to our Instagram"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a href="#" class="footer__social-link">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Facebook page">
                                         <i
-                                            class="fab fa-pinterest footer__social-icon"
-                                            alt="Link to our Pinterest"></i>
+                                            class="fab fa-facebook footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our X (previous Twitter) page">
+                                        <i
+                                            class="fab fa-twitter footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Instagram page">
+                                        <i
+                                            class="fab fa-instagram footer__social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a
+                                        href="#"
+                                        class="footer__social-link"
+                                        aria-label="Visit our Pinterest page">
+                                        <i
+                                            class="fab fa-pinterest footer__social-icon"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -484,6 +513,16 @@
                                     src="./assets/photos/MUSE-Hotel-Awards-Logo-Black-1200x857.png"
                                     alt="MUSE-Hotel-Awards Logo"
                             /></a>
+                        </li>
+
+                        <li class="footer__contact-item">
+                            <a
+                                href="http://jigsaw.w3.org/css-validator/check/referer">
+                                <img
+                                    style="border: 0; width: 88px; height: 31px"
+                                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                                    alt="Valid CSS!" />
+                            </a>
                         </li>
                     </ul>
 
@@ -502,10 +541,12 @@
                         <label
                             for="email"
                             class="footer__newsletter-label booking-widget__label--hidden"
+                            aria-label="Enter your email"
                             >Enter your email:</label
                         >
                         <input
                             class="footer__newsletter-input"
+                            aria-label="Enter your email"
                             type="email"
                             id="email"
                             name="email"
@@ -539,7 +580,7 @@
                         /></a>
                     </figure>
 
-                    <button class="button button--follow">FOLLOW US</button>
+                    <button class="button button--no-border">FOLLOW US</button>
                 </section>
             </footer>
         </div>

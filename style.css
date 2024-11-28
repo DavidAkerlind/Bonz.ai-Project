@@ -44,7 +44,7 @@ Version: 1.0
     --font-lora: "Lora", serif; /* Rustic, calm feel for main h1 */
     --color-primary: #fff;
     --color-secondary: #ddd;
-    --color-accent: #02594e;
+    --color-accent: #20776e;
     --color-light: #4b4b4b;
     --color-dark: #333;
     --color-darker: #202020;
@@ -52,6 +52,7 @@ Version: 1.0
     --color-navbar: rgba(0, 0, 0, 0.3);
     --color-dropdown: rgba(0, 0, 0, 0.8);
     --color-accent-light: #d2e7e3;
+    --color-accent-lighter: #f7fffe;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     --transition-speed: 0.3s;
 }
@@ -73,6 +74,10 @@ body {
     letter-spacing: 0.3ch;
     overflow-x: hidden;
     text-align: center;
+    background-image: url(./assets/photos/936.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: auto;
 }
 
 ul {
@@ -129,6 +134,12 @@ h4 {
 /* ======================================= */
 /* ====== Page Styling starts here======== */
 /* ======================================= */
+
+/* ==== Credit Link ===*/
+
+.img-credit-link {
+    display: none;
+}
 
 /* ==== Skip Link ==== */
 
@@ -419,10 +430,12 @@ h4 {
 /*  Button is styled in the basic styling also */
 
 .main-content {
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--color-accent-lighter);
 }
 
 /* ====== Booking widget ====== */
@@ -432,7 +445,7 @@ h4 {
     justify-content: center;
     align-items: center;
     background-color: var(--color-primary);
-    margin-top: -3.5rem;
+    margin-top: -9.5rem;
     position: relative;
     padding-inline: 1.5rem;
     max-width: 70vw;
@@ -524,8 +537,11 @@ h4 {
     font-size: 1rem;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator:focus {
+input[type="date"]::-webkit-calendar-picker-indicator:focus,
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
     border: 2px solid #444;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .button--search-cabin {
@@ -540,6 +556,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     font-weight: 200;
     font-size: 1rem;
     margin: 4rem 0 2rem 0;
+}
+
+.main-content__title--hidden {
+    display: none;
 }
 
 /* ==== Main Content Grid Section ===== */
@@ -604,13 +624,17 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     content: none;
 }
 
+.card__caption-hidden {
+    display: none;
+}
+
 .card__title {
     z-index: 2;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--color-primary);
     letter-spacing: 0.3ch;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -622,7 +646,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     justify-content: space-around;
 }
 .card__sub-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-darker);
     margin-top: 2rem;
     font-weight: 400;
@@ -634,7 +658,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 }
 
 .card__description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 2rem;
     max-width: 40rem;
 }
@@ -648,12 +672,19 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 
 /* ==== Main Content Small Info ===== */
 
+.main-content__small-info {
+    background-color: var(--color-accent-light);
+    padding: 0rem 6rem 3rem 6rem;
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+
 .main-content__grid-section--more-gap {
     gap: 6rem;
 }
 
 .grid-section__info-box--down {
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 .info-box__number-title {
@@ -662,7 +693,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 
 .info-box__number-info {
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--color-accent-light);
+    border-bottom: 2px solid var(--color-darker);
 }
 
 /* ==== Footer section ===== */
@@ -720,8 +751,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 }
 
 .footer__newsletter {
-    padding-inline: 1rem;
-
+    padding: 0 1rem 2rem 1rem;
     background-color: var(--color-primary);
 }
 
@@ -731,15 +761,20 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     flex-direction: column;
     gap: 2rem;
 }
+
 .footer__newsletter-input {
+    text-align: center;
     padding: 0.8rem;
     font-size: 1rem;
 }
 
 .button--wide {
     width: 100%;
-    align-self: center;
     margin: 0;
+}
+
+.button--no-border {
+    border: 2px solid transparent;
 }
 
 .footer__newsletter-text {
@@ -748,22 +783,12 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     line-height: 4ch;
 }
 
-.footer__follow {
-    min-width: 30%;
-    padding-bottom: 3rem;
-}
-
-.button--follow {
-    border: 2px solid transparent;
-}
-
 .footer__follow-img {
     max-width: 15rem;
     margin-bottom: 1.5rem;
     transition: transform 1s ease-in-out;
 }
-.footer__follow-img:hover,
-.footer__follow-img:focus {
+.footer__follow-img:hover {
     transform: scale(1.15);
 }
 
@@ -861,5 +886,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .footer__follow-img {
+        max-width: 10rem;
     }
 }
