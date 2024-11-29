@@ -4,8 +4,8 @@ File name: style.css
 Description: Main stylesheet for the website layout and design.
 Author:David Åkerlind
 Created: 2024-11-23
-Last updated: 2024-11-24
-Version: 1.0
+Last updated: 2024-11-29
+Version: 1.1.2
 
     1. Font import
     2. Variables
@@ -13,38 +13,45 @@ Version: 1.0
 
     4. Basic styling
 
-    1.1 Header Component
-    1.2 Burger Menu
-    1.3 Navigation Bar
-    1.4 Main Content
-    1.5 Plant Card Section
-    1.6 Footer Section - (used on all pages)
-    1.7 Back to top Bar
+    1 Page Styling
+    1.1 Credit Link
+    1.2 Skip Link
+    1.3 Navbar Full
+    1.4 Dropdowns
+    1.5 Navbar Burger
+    1.6 Burger Button
+    1.7 Hero Section
+    
+    2 Main Section
+    2.1 Booking Widget
+    2.2 Main Content After Widget
+    2.3 Main Grid Section
+    2.4 Main Content Small Info
+    
+    3 Footer Section - (used on all pages)
+    3.1 Back to top Bar (NOT DONE)
 
-    2.1. My Page Styling
-    2.2. Header Component - My Pages
-    2.3. Form - My Pages
-    2.4. Planed Plants Grid - My pages
-    2.5 Footer section - Mypages
-
+    4 About Page Styling
+    4.1 About Hero
+    
     3.1 Media Queries
     3.2 Media Queries Standard
-    3.3 Media Queries - My Pages
+    3.3 Media Queries - About
 
 
 
 */
 
-/* Import Fonts */
+/* ==== Font Import ==== */
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Variables Section */
+/* ==== Variables ==== */
 :root {
     --font-poppins: "Poppins", sans-serif; /* Normal text */
     --font-lora: "Lora", serif; /* Rustic, calm feel for main h1 */
     --color-primary: #fff;
     --color-secondary: #ddd;
-    --color-accent: #20776e;
+    --color-accent: #1f6e66;
     --color-light: #4b4b4b;
     --color-dark: #333;
     --color-darker: #202020;
@@ -57,7 +64,7 @@ Version: 1.0
     --transition-speed: 0.3s;
 }
 
-/* Reset / Normalize */
+/* ==== Reset / Normalize ==== */
 
 * {
     box-sizing: border-box;
@@ -78,6 +85,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: auto;
+    width: 100vw;
 }
 
 ul {
@@ -90,7 +98,7 @@ a {
     cursor: pointer;
 }
 
-/*  Basic styling */
+/*  ====  Basic styling  ==== */
 
 .wrapper {
     width: 100vw;
@@ -104,7 +112,6 @@ h4 {
     font-weight: 200;
 }
 
-/*  CHevrons and other font awesome icons are smaller */
 .fa-chevron-down {
     transform: scaleY(0.7);
 }
@@ -116,7 +123,7 @@ h4 {
 .button {
     padding: 0.8rem 1.5rem;
     z-index: 1;
-    transition: all 0.3s ease; /* Add transition for background color and border */
+    transition: all 0.3s ease;
     letter-spacing: 0.4ch;
     background-color: var(--color-primary);
     color: var(--color-darker);
@@ -146,7 +153,7 @@ h4 {
 .skip-link__button {
     opacity: 0;
     position: fixed;
-    top: -9999px; /* Move it off-screen initially */
+    top: -9999px;
     left: 50%;
     transform: translateX(-50%);
     padding: 4rem;
@@ -222,7 +229,7 @@ h4 {
     font-weight: 600;
 }
 
-/* Styling both on the fullpage cabins dropdown and on teh mobil version here */
+/*  ==== Dropdown  ====  */
 
 .navbar__item--has-dropdown:hover .navbar__dropdown,
 .navbar__item--has-dropdown:focus-within .navbar__dropdown,
@@ -266,7 +273,7 @@ h4 {
     color: var(--color-primary);
 }
 
-/* Navbar burgermenu  */
+/*  ==== Navbar Burgermenu  ====  */
 .menu__navigation {
     display: none;
     position: fixed;
@@ -283,7 +290,6 @@ h4 {
     overflow-y: auto;
 }
 
-/* Add an overlay using ::after */
 .menu__navigation::after {
     content: "";
     position: absolute;
@@ -325,7 +331,7 @@ h4 {
     left: 10%;
     top: -100%;
 }
-/* ==== BUrger menu styling ====  */
+/* ==== BUrger Button====  */
 
 .menu__checkbox {
     display: none;
@@ -412,6 +418,7 @@ h4 {
     justify-content: center;
     gap: 1vh;
     color: var(--color-primary);
+    width: 100%;
 }
 
 .hero__title {
@@ -421,8 +428,7 @@ h4 {
     letter-spacing: 0.6ch;
 }
 
-.hero__img,
-.hero__logo-figure {
+.hero__img {
     max-width: 12rem;
 }
 
@@ -431,9 +437,12 @@ h4 {
     font-weight: 200;
     letter-spacing: 1ch;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 /*  Button is styled in the basic styling also */
+
+/*  ==== Main Content  ====  */
 
 .main-content {
     margin-top: 6rem;
@@ -572,11 +581,14 @@ h4 {
     border: 2px solid var(--color-primary);
 }
 
+/*  ==== Main Content after widget */
+
 .main-content__title {
     font-family: var(--font-poppins);
     font-weight: 200;
     font-size: 1rem;
     margin: 4rem 0 2rem 0;
+    padding: 2rem;
 }
 
 .main-content__title--hidden {
@@ -588,8 +600,7 @@ h4 {
 .main-content__grid-section {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    /* grid-template-rows: auto auto; */
-    margin-inline: 4rem;
+    margin: 2rem 0;
     gap: 2rem;
     max-width: 100%;
 }
@@ -626,8 +637,8 @@ h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark filter with 50% opacity */
-    z-index: 1; /* Ensure the overlay is on top of the image */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 .card__bg-container--swim {
     background-image: url(./assets/photos/DALL·E\ 2024-11-27\ 09.50.36\ -\ A\ serene\ and\ picturesque\ scene\ showing\ a\ woman\ climbing\ down\ a\ swim\ ladder\ into\ a\ clear\,\ calm\ lake\ surrounded\ by\ mountains.\ The\ shot\ is\ taken\ from\ abo.webp);
@@ -695,13 +706,21 @@ h4 {
 
 .main-content__small-info {
     background-color: var(--color-accent-light);
-    padding: 0rem 6rem 3rem 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 2px;
-    margin: 2rem 0;
+    margin: 0 auto;
 }
 
 .main-content__grid-section--more-gap {
-    gap: 6rem;
+    max-width: fit-content;
+    gap: 4rem;
+    padding-inline: 2rem;
+    min-width: 100%;
+    margin-inline: 2rem;
 }
 
 .grid-section__info-box--down {
@@ -811,6 +830,126 @@ h4 {
     transition: transform 1s ease-in-out;
 }
 
+/*  ============================== */
+/*  ===== ABOUT PAGE STYLING ===== */
+/*  ============================== */
+
+/*  ==== About Hero ====  */
+
+.hero--row {
+    justify-content: space-evenly;
+    background-image: url("./assets/photos/08-night.jpg");
+    padding: 8rem 7rem 4rem 7rem;
+    flex-direction: row;
+    max-height: 35rem;
+    gap: 5vw;
+}
+
+.hero--row :nth-child(odd) {
+    flex: 1;
+}
+.hero__img--small {
+    max-width: 6rem;
+}
+
+.hero__logo-container {
+    text-align: center;
+}
+
+/* ==== ABOUT Main Section ==== */
+
+/* ==== stats section ==== */
+
+.main-content__stats-section,
+.stats-section__info {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 6rem 6rem 6rem;
+    text-align: left;
+    background-color: var(--color-accent-light);
+    border-radius: 2px;
+    line-height: 3ch;
+}
+
+.stats-section__img {
+    border-radius: 2px;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.stats-section__info,
+.stats-section__img-container {
+    width: 100%;
+    grid-column: span 2;
+    margin: 0;
+}
+
+.button--pos-abs {
+    position: absolute;
+    top: 50%;
+    left: 48.5%;
+    transform: translate(-50%, -48.5%);
+    border: 4px transparent;
+    aspect-ratio: 1;
+    width: auto;
+    margin: 0;
+}
+.fa-play {
+    font-size: 2rem;
+}
+
+.stats-section__info {
+    padding: 2rem 0;
+    margin-left: 2rem;
+}
+.stats-section__sub-title,
+.stats-section__title,
+.stats-section__description {
+    grid-column: span 4;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.stats-section__title {
+    font-size: 2rem;
+}
+
+.stats-section__description {
+    font-size: 0.9rem;
+    letter-spacing: 0.2ch;
+}
+
+.stats-section__sub-title {
+    color: var(--color-accent);
+}
+
+.stats-section__icon {
+    font-size: 3rem;
+    margin: auto 0rem auto auto;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-darker);
+}
+
+.stats-section__icon-info {
+    font-size: 1.2rem;
+    margin: auto auto auto 1rem;
+}
+
+.stats-section__icon-title {
+    font-weight: 400;
+}
+
+.stats-section__icon-number {
+    font-family: var(--font-lora);
+    font-size: 2rem;
+}
+
+.stats-section__icon-number--green,
+.stats-section__icon--green {
+    color: var(--color-accent);
+    -webkit-text-stroke: transparent;
+}
+
 /*
 1
     1
@@ -838,164 +977,8 @@ h4 {
     1
     1
     1
-    1*/
+    1
 
-/* General Reset */
-
-/* Hero Section */
-.main__section--hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-    background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ),
-        url("path/to/your-background.jpg") no-repeat center center;
-    background-size: cover;
-}
-
-.hero__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-}
-
-.hero__description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-.hero__image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero__image-container {
-    max-width: 100%;
-}
-
-/* Features Section */
-.main__section--features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 4rem 2rem;
-    background-color: #f4f4f4;
-}
-
-.feature__item {
-    text-align: center;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.feature__item:hover {
-    transform: translateY(-10px);
-}
-
-.feature__icon {
-    margin-bottom: 1rem;
-}
-
-.feature__icon-img {
-    width: 50px;
-    height: 50px;
-}
-
-.feature__title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.feature__description {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* About Section */
-.main__section--about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 4rem 2rem;
-}
-
-.about__text {
-    margin-bottom: 2rem;
-}
-
-.about__title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.about__description {
-    font-size: 1.125rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.about__image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Call to Action Section */
-.main__section--cta {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.cta__title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.cta__description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-/* Button Class */
-
-/* Media Queries */
-@media (max-width: 576px) {
-    .main__grid-section--hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .main__grid-section--features {
-        grid-template-columns: 1fr;
-    }
-
-    .main__grid-section--about {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 1000px) {
-    .main__grid-section--features {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .main__grid-section--about {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/*
 1
     1
     1
@@ -1082,6 +1065,14 @@ h4 {
         min-width: 100%;
     }
 
+    .main-content__grid-section--more-gap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-section__info-box--down {
+        margin: 0;
+    }
+
     .footer {
         display: flex;
         flex-wrap: wrap;
@@ -1091,5 +1082,39 @@ h4 {
 
     .footer__follow-img {
         max-width: 10rem;
+    }
+    .main-content__stats-section {
+        margin: 0 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-section__info {
+        margin: 0;
+        text-align: center;
+    }
+
+    .stats-section__img {
+        border-radius: 2px;
+        min-width: 100%;
+        max-height: 40rem;
+    }
+
+    .button--pos-abs {
+        display: none;
+    }
+
+    .stats-section__icon {
+        margin-top: 1rem;
+        border-bottom: 1px solid(--color-accent-lighter);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-content__grid-section,
+    .main-content__grid-section--more-gap {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+
+    .hero--row {
+        flex-direction: column;
     }
 }
