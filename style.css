@@ -1146,6 +1146,7 @@ h4 {
         margin: 0 0.5rem;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .stats-section__info {
         margin: 0;
         text-align: center;
@@ -1162,8 +1163,12 @@ h4 {
     }
 
     .stats-section__icon {
-        margin-top: 1rem;
+        margin-top: 2rem;
         border-bottom: 1px solid(--color-accent-lighter);
+    }
+    .stats-section__icon-info {
+        margin-top: 1.5rem;
+        text-align: left;
     }
 
     .testimonial-section__list {
