@@ -34,9 +34,10 @@ Version: 1.1.2
     4 About Page Styling
     4.1 About Hero
     
-    3.1 Media Queries
-    3.2 Media Queries Standard
-    3.3 Media Queries - About
+    5 Media Queries 990px
+    5.1 Media Queries - About
+
+    6 Media Queries 576px
 
 
 
@@ -47,8 +48,8 @@ Version: 1.1.2
 
 /* ==== Variables ==== */
 :root {
-    --font-poppins: "Poppins", sans-serif; /* Normal text */
-    --font-lora: "Lora", serif; /* Rustic, calm feel for main h1 */
+    --font-poppins: "Poppins", sans-serif;
+    --font-lora: "Lora", serif;
     --color-primary: #fff;
     --color-secondary: #ddd;
     --color-accent: #1f6e66;
@@ -1142,6 +1143,8 @@ h4 {
     .footer__follow-img {
         max-width: 10rem;
     }
+
+    /* ==== Media Queries - About ==== */
     .main-content__stats-section {
         margin: 0 0.5rem;
         grid-template-columns: repeat(2, 1fr);
