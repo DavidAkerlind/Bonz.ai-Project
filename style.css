@@ -573,6 +573,7 @@ h4 {
 .flatpickr-current-month {
     background-color: var(--color-accent);
     color: var(--color-primary) !important;
+    border-radius: 2px;
 }
 
 .button--search-cabin {
@@ -878,6 +879,7 @@ h4 {
     border-radius: 2px;
     max-width: 100%;
     min-height: 100%;
+    max-height: 25rem;
 }
 
 .stats-section__info,
@@ -1010,62 +1012,103 @@ h4 {
     object-fit: cover;
 }
 
-/*
-1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
+/*  ================================ */
+/*  ===== BOOKING PAGE STYLING ===== */
+/*  ================================ */
 
-1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1
-    1*/
+.main-content--transparent {
+    background: transparent;
+}
+
+.main-content__title-box {
+    background-color: var(--color-accent-light);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.main-content__title--big-bg {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 0 1rem 0;
+}
+
+.main-content__sub-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.2ch;
+    font-weight: 300;
+    font-family: var(--font-poppins);
+}
+.main-content__booking-page {
+    margin-top: 3rem;
+    display: flex;
+    padding: 0 6rem;
+    gap: 2rem;
+    position: relative;
+}
+
+.booking-widget__divider {
+    margin: 0.5rem 0;
+    background-color: var(--color-accent);
+    width: 100%;
+}
+
+.main-content__booking-widget--big {
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 28rem;
+    max-width: 22rem;
+    position: sticky;
+    top: 6.5rem;
+    background-color: var(--color-accent-light);
+    padding: 1rem;
+    margin: 0;
+}
+
+.booking-widget__fieldset {
+    border: none;
+}
+
+.booking-widget__legend {
+    display: none;
+}
+.booking-widget__calendar {
+    outline: none;
+    border: 4px solid transparent;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.booking-widget__calendar:focus {
+    border: 4px solid var(--color-primary);
+    border-radius: 2px;
+}
+.booking-widget__input--no-border {
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.booking-widget__form--big {
+    box-shadow: none;
+    padding: 0;
+    background-color: inherit;
+}
+
+.package-details-page__info,
+.room-selection__info {
+    margin-bottom: 2rem;
+}
+
+.package__image,
+.package-details__image {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+/*  ========================= */
+/*  ===== MEDIA QUERIES ===== */
+/*  ========================= */
+
 @media screen and (max-width: 990px) {
     .wrapper {
         overflow-x: hidden;
