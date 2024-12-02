@@ -4,7 +4,7 @@ File name: style.css
 Description: Main stylesheet for the website layout and design.
 Author:David Åkerlind
 Created: 2024-11-23
-Last updated: 2024-11-29
+Last updated: 2024-12-02
 Version: 1.1.2
 
     1. Font import
@@ -22,25 +22,32 @@ Version: 1.1.2
     1.6 Burger Button
     1.7 Hero Section
     
-    2 Main Section
+    2 Main Content
     2.1 Booking Widget
     2.2 Main Content After Widget
     2.3 Main Grid Section
     2.4 Main Content Small Info
     
-    3 Footer Section - (used on all pages)
-    3.1 Back to top Bar (NOT DONE)
+    3 Footer Section - (used on all pages except booking page)
+   
 
     4 About Page Styling
     4.1 About Hero
+    4.2 About Main Section
+    4.3 Stats section
+    4.4 Testimonials section
+
+    5 Booking Page Styling
+    5.1 Booking Page Main Content
+    5.2 Booking Widget Big
+    5.3 BOOKING PACKAGES SECTION
     
-    5 Media Queries 990px
-    5.1 Media Queries - About
-
-    6 Media Queries 576px
-
-
-
+    6 Media Queries
+    6.1 Max-width: 1200px
+    6.2 Max-width: 1000px
+    6.2.1 Media Queries - About
+    6.2.2 Media Queries - Booking
+    6.3 Max-width: 576px
 */
 
 /* ==== Font Import ==== */
@@ -193,7 +200,7 @@ h4 {
 }
 
 /* ======================================= */
-/* ====== Page Styling starts here======== */
+/* ====== Page Styling starts here ======== */
 /* ======================================= */
 
 /* ==== Credit Link ===*/
@@ -328,6 +335,7 @@ h4 {
 }
 
 /*  ==== Navbar Burgermenu  ====  */
+
 .menu__navigation {
     display: none;
     position: fixed;
@@ -618,7 +626,7 @@ h4 {
     border-radius: 2px;
 }
 
-/*  ==== Main Content after widget */
+/*  ==== Main Content after widget ==== */
 
 .main-content__title {
     font-family: var(--font-poppins);
@@ -966,7 +974,7 @@ h4 {
     -webkit-text-stroke: transparent;
 }
 
-/* ==== About Testamonials  */
+/* ==== About Testamonials  ==== */
 .main-content__testamonial-section {
     padding: 3rem 2rem;
     background-image: url(./assets/photos/937.jpg);
@@ -1027,6 +1035,8 @@ h4 {
 /*  ===== BOOKING PAGE STYLING ===== */
 /*  ================================ */
 
+/* ==== Booking Page Main Content ==== */
+
 .main-content--transparent {
     background: transparent;
     margin-bottom: 5rem;
@@ -1061,6 +1071,8 @@ h4 {
     justify-content: center;
     transition: all 0.3s ease-in-out;
 }
+
+/*  ==== Booking Widget Big ==== */
 
 .booking-widget__title {
     font-family: var(--font-poppins);
@@ -1329,6 +1341,7 @@ h4 {
     }
 
     /* ==== Media Queries - About ==== */
+
     .main-content__stats-section {
         margin: 0 1.5rem;
         grid-template-columns: repeat(2, 1fr);
