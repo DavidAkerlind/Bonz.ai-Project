@@ -1047,6 +1047,7 @@ h4 {
     padding: 0 6rem;
     gap: 2rem;
     position: relative;
+    justify-content: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1348,6 +1349,10 @@ h4 {
 
     /* ==== Media Queries - Booking ==== */
 
+    .main-content--transparent {
+        margin-top: 3rem;
+    }
+
     .main-content__booking-page {
         flex-direction: column;
     }
@@ -1356,6 +1361,10 @@ h4 {
     }
     .package__image {
         height: 15rem;
+    }
+
+    .main-content__title-box {
+        padding: 1rem;
     }
 }
 
@@ -1367,5 +1376,8 @@ h4 {
 
     .hero--row {
         flex-direction: column;
+    }
+    .main-content__booking-page {
+        padding: 0 1rem;
     }
 }
