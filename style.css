@@ -128,6 +128,7 @@ h4 {
     letter-spacing: 0.4ch;
     background-color: var(--color-primary);
     color: var(--color-darker);
+    border-radius: 2px;
 }
 
 .button:hover,
@@ -137,6 +138,58 @@ h4 {
     color: var(--color-primary);
     cursor: pointer;
     border-radius: 2px;
+}
+
+.button--search-location {
+    position: absolute;
+    padding: 0.6rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-darker);
+    font-size: 1rem;
+}
+
+.button--search-cabin {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    border-radius: 2px;
+    border: 2px solid var(--color-primary);
+}
+
+.button--bg-black {
+    margin: 0 2rem 2rem 2rem;
+    width: 50%;
+    color: var(--color-primary);
+    background-color: var(--color-darker);
+    border-color: transparent;
+}
+
+.button--wide {
+    width: 100%;
+    margin: 0;
+}
+
+.button--no-border {
+    border: 2px solid transparent;
+}
+
+.button--pos-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px transparent;
+    aspect-ratio: 1;
+    width: auto;
+    margin: 0;
+    padding: 2rem;
+}
+
+.button--no-margin {
+    margin: 0;
 }
 
 /* ======================================= */
@@ -541,17 +594,6 @@ h4 {
 }
 
 /* Search Button Inside Input */
-.button--search-location {
-    position: absolute;
-    padding: 0.6rem;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: var(--color-darker);
-    font-size: 1rem;
-}
 
 .flatpickr-calendar {
     background-color: var(--color-accent);
@@ -574,13 +616,6 @@ h4 {
     background-color: var(--color-accent);
     color: var(--color-primary) !important;
     border-radius: 2px;
-}
-
-.button--search-cabin {
-    background-color: var(--color-light);
-    color: var(--color-primary);
-    border-radius: 2px;
-    border: 2px solid var(--color-primary);
 }
 
 /*  ==== Main Content after widget */
@@ -642,6 +677,7 @@ h4 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    border-radius: 2px;
 }
 .card__bg-container--swim {
     background-image: url(./assets/photos/DALL·E\ 2024-11-27\ 09.50.36\ -\ A\ serene\ and\ picturesque\ scene\ showing\ a\ woman\ climbing\ down\ a\ swim\ ladder\ into\ a\ clear\,\ calm\ lake\ surrounded\ by\ mountains.\ The\ shot\ is\ taken\ from\ abo.webp);
@@ -696,13 +732,6 @@ h4 {
     font-size: 0.8rem;
     padding: 2rem;
     max-width: 40rem;
-}
-.button--bg-black {
-    margin: 0 2rem 2rem 2rem;
-    width: 50%;
-    color: var(--color-primary);
-    background-color: var(--color-darker);
-    border-color: transparent;
 }
 
 /* ==== Main Content Small Info ===== */
@@ -812,15 +841,6 @@ h4 {
     font-size: 1rem;
 }
 
-.button--wide {
-    width: 100%;
-    margin: 0;
-}
-
-.button--no-border {
-    border: 2px solid transparent;
-}
-
 .footer__newsletter-text {
     font-size: 0.6rem;
     letter-spacing: 0.4ch;
@@ -890,17 +910,6 @@ h4 {
     margin: 0;
 }
 
-.button--pos-abs {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 4px transparent;
-    aspect-ratio: 1;
-    width: auto;
-    margin: 0;
-    padding: 2rem;
-}
 .fa-play {
     font-size: 2rem;
 }
@@ -1217,10 +1226,6 @@ h4 {
 
 .package__price strong {
     font-size: 18px;
-}
-
-.button--no-margin {
-    margin: 0;
 }
 
 .to-top-link {
