@@ -201,16 +201,20 @@
             <!--  MAIN SECTION / CONTENT -->
             <main class="main-content main-content--transparent">
                 <section class="main-content__title-box">
-                    <h1 class="main-content__title main-content__title--big-bg">
+                    <h1 class="main-content__title main-content__title--big">
                         PLEASE CHOOSE ONE OFFER
                     </h1>
+
                     <h2
                         class="main-content__sub-title"
                         aria-label="tells you what option to fill in">
+                        <!-- Here it should change to the selected date when chosen  -->
                         You haven't chosen a date yet
                     </h2>
                 </section>
                 <div class="main-content__booking-page">
+                    <!-- === BOOKING WIDGET BIG CALENDER ==== -->
+
                     <section
                         class="main-content__booking-widget main-content__booking-widget--big">
                         <h3 class="booking-widget__title">PICK DATE & OFFER</h3>
@@ -227,11 +231,14 @@
                                     <legend class="booking-widget__legend">
                                         Select Dates
                                     </legend>
-                                    <div
+                                    <input
+                                        type="text"
                                         id="date-picker"
                                         class="booking-widget__calendar"
                                         aria-live="polite"
-                                        aria-label="Calendar to select a date range"></div>
+                                        aria-label="Calendar to select a date range"
+                                        placeholder="SELECT A DATE BELOW"
+                                        required />
                                 </fieldset>
                             </div>
                             <!--  Script for the custom calendar  -->
@@ -374,6 +381,7 @@
                                     >Guests</label
                                 >
                                 <select
+                                    required
                                     id="guests"
                                     class="booking-widget__input booking-widget__input--no-border"
                                     aria-label="Select number of guests">
@@ -395,198 +403,197 @@
                         </form>
                     </section>
 
-                    <section class="booking-page__packages">
+                    <!-- ==== BOOKING PACKAGES SECTION ===== -->
+                    <section class="main-content__booking-packages">
                         <article class="package">
-                            <img
-                                src="./assets/photos/01-night.jpg"
-                                alt="Cabin Package 1"
-                                class="package__image" />
-                            <article class="package__details">
-                                <h2 class="package__title">
-                                    Cozy Winter Cabin
-                                </h2>
-                                <p class="package__description">
-                                    Enjoy a warm, cozy stay in the heart of
-                                    nature.
+                            <div class="package__image-wrapper">
+                                <img
+                                    src="./assets/photos/fb24277a-60b5-44ac-8fa1-f032a0675381.jpg"
+                                    alt="Luxurious cabin by a lake credit: deepai"
+                                    class="package__image" />
+                            </div>
+                            <div class="package__details">
+                                <h3 class="package__title">GRAND ESCAPE</h3>
+                                <p class="package__subtitle">
+                                    <i class="fa fa-circle"></i> LUNCH
+                                    <i class="fa fa-circle"></i> BREAKFAST
+                                    <i class="fa fa-circle"></i> BEACH CLUB
+                                    ACCESS <br /><i class="fa fa-circle"></i> 3
+                                    CURSE DINNER <i class="fa fa-circle"></i>
+                                    WHOLE CABIN
                                 </p>
-                                <p class="package__price">From $150/night</p>
-                                <button class="button" data-package="1">
-                                    Select
-                                </button>
-                            </article>
+                                <a href="#" class="package__more-info"
+                                    >More information
+                                    <i class="fa fa-chevron-right"></i
+                                ></a>
+                                <ul class="package__features">
+                                    <li>
+                                        <i class="fa fa-check"></i> Grand Escape
+                                        includes:
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Check-in:
+                                        4:00 PM, Check-out: 11:00 AM
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Aperitif -
+                                        By AI bartender
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> AI Beach
+                                        Club Access: <strong>Unlimited</strong>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Breakfast
+                                        buffet in restaurant
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Gym access
+                                    </li>
+                                </ul>
+                                <hr class="booking-widget__divider" />
+                                <section class="package__bottom-section">
+                                    <p class="package__price">
+                                        <strong>From 2 845 SEK</strong><br />
+                                        for 1 night
+                                    </p>
+                                    <button
+                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        aria-label="Select this package for 845 SEK per guest">
+                                        SELECT
+                                        <i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </section>
+                            </div>
                         </article>
                         <article class="package">
-                            <img
-                                src="cabin2.jpg"
-                                alt="Cabin Package 2"
-                                class="package__image" />
-                            <article class="package__details">
-                                <h2 class="package__title">
-                                    Luxury Cabin Retreat
-                                </h2>
-                                <p class="package__description">
-                                    Experience the ultimate in luxury and
-                                    comfort.
+                            <div class="package__image-wrapper">
+                                <img
+                                    src="./assets/photos/edb36771-2e2c-4d68-9606-a9fd961fb47b.jpg"
+                                    alt="Luxurious cabin by a lake credit: deepai"
+                                    class="package__image" />
+                            </div>
+                            <div class="package__details">
+                                <h3 class="package__title">GRAND ESCAPE</h3>
+                                <p class="package__subtitle">
+                                    <i class="fa fa-circle"></i> LUNCH
+                                    <i class="fa fa-circle"></i> BREAKFAST
+                                    <i class="fa fa-circle"></i> BEACH CLUB
+                                    ACCESS <br /><i class="fa fa-circle"></i> 3
+                                    CURSE DINNER <i class="fa fa-circle"></i>
+                                    WHOLE CABIN
                                 </p>
-                                <p class="package__price">From $300/night</p>
-                                <button class="button" data-package="2">
-                                    Select
-                                </button>
-                            </article>
+                                <a href="#" class="package__more-info"
+                                    >More information
+                                    <i class="fa fa-chevron-right"></i
+                                ></a>
+                                <ul class="package__features">
+                                    <li>
+                                        <i class="fa fa-check"></i> Grand Escape
+                                        includes:
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Check-in:
+                                        4:00 PM, Check-out: 11:00 AM
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Aperitif -
+                                        By AI bartender
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> AI Beach
+                                        Club Access: <strong>Unlimited</strong>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Breakfast
+                                        buffet in restaurant
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Gym access
+                                    </li>
+                                </ul>
+                                <hr class="booking-widget__divider" />
+                                <section class="package__bottom-section">
+                                    <p class="package__price">
+                                        <strong>From 2 845 SEK</strong><br />
+                                        for 1 night
+                                    </p>
+                                    <button
+                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        aria-label="Select this package for 845 SEK per guest">
+                                        SELECT
+                                        <i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </section>
+                            </div>
+                        </article>
+                        <article class="package">
+                            <div class="package__image-wrapper">
+                                <img
+                                    src="./assets/photos/03e6892d-f060-48a6-9521-921f046b52f5.jpg"
+                                    alt="Luxurious cabin by a lake credit: deepai"
+                                    class="package__image" />
+                            </div>
+                            <div class="package__details">
+                                <h3 class="package__title">GRAND ESCAPE</h3>
+                                <p class="package__subtitle">
+                                    <i class="fa fa-circle"></i> LUNCH
+                                    <i class="fa fa-circle"></i> BREAKFAST
+                                    <i class="fa fa-circle"></i> BEACH CLUB
+                                    ACCESS <br />
+                                    <i class="fa fa-circle"></i> 3 CURSE DINNER
+                                    <i class="fa fa-circle"></i>
+                                    WHOLE CABIN
+                                </p>
+                                <a href="#" class="package__more-info"
+                                    >More information
+                                    <i class="fa fa-chevron-right"></i
+                                ></a>
+                                <ul class="package__features">
+                                    <li>
+                                        <i class="fa fa-check"></i> Grand Escape
+                                        includes:
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Check-in:
+                                        4:00 PM, Check-out: 11:00 AM
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Aperitif -
+                                        By AI bartender
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> AI Beach
+                                        Club Access: <strong>Unlimited</strong>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Breakfast
+                                        buffet in restaurant
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i> Gym access
+                                    </li>
+                                </ul>
+                                <hr class="booking-widget__divider" />
+                                <section class="package__bottom-section">
+                                    <p class="package__price">
+                                        <strong>From 2 845 SEK</strong><br />
+                                        for 1 night
+                                    </p>
+                                    <button
+                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        aria-label="Select this package for 845 SEK per guest">
+                                        SELECT
+                                        <i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </section>
+                            </div>
                         </article>
                     </section>
                 </div>
             </main>
 
             <!-- FOOTER SECTION -->
-
-            <footer class="footer">
-                <!-- Contact Info Section -->
-                <section class="footer__contact-info">
-                    <h3 class="footer__title">Get in touch</h3>
-                    <ul class="footer__contact-list">
-                        <li class="footer__contact-item">Bonz.ai Group AB</li>
-                        <li class="footer__contact-item">Lorem, ipsum.</li>
-                        <li class="footer__contact-item">190 12 Lofoten</li>
-                        <li class="footer__contact-item">Org.nr 123412-1232</li>
-                        <li class="footer__contact-item">
-                            Phone:
-                            <a
-                                href="tel:+1234567890"
-                                class="footer__contact-link"
-                                >+1234567890</a
-                            >
-                        </li>
-                        <li class="footer__contact-item">
-                            Email:
-                            <a
-                                href="mailto:contact@yourcompany.com"
-                                class="footer__contact-link"
-                                >contact@bonzai.com</a
-                            >
-                        </li>
-
-                        <li class="footer__contact-item">
-                            <ul
-                                class="footer__contact-list footer__contact-list--row">
-                                <li class="footer__social-item">
-                                    <a
-                                        href="#"
-                                        class="footer__social-link"
-                                        aria-label="Visit our Facebook page">
-                                        <i
-                                            class="fab fa-facebook footer__social-icon"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a
-                                        href="#"
-                                        class="footer__social-link"
-                                        aria-label="Visit our X (previous Twitter) page">
-                                        <i
-                                            class="fab fa-twitter footer__social-icon"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a
-                                        href="#"
-                                        class="footer__social-link"
-                                        aria-label="Visit our Instagram page">
-                                        <i
-                                            class="fab fa-instagram footer__social-icon"></i>
-                                    </a>
-                                </li>
-                                <li class="footer__social-item">
-                                    <a
-                                        href="#"
-                                        class="footer__social-link"
-                                        aria-label="Visit our Pinterest page">
-                                        <i
-                                            class="fab fa-pinterest footer__social-icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="footer__contact-item">
-                            <a class="footer__award-container" href="#">
-                                <img
-                                    class="footer__award-img footer__social-icon"
-                                    src="./assets/photos/MUSE-Hotel-Awards-Logo-Black-1200x857.png"
-                                    alt="MUSE-Hotel-Awards Logo"
-                            /></a>
-                        </li>
-
-                        <li class="footer__contact-item">
-                            <a
-                                class="footer__css-validation"
-                                href="http://jigsaw.w3.org/css-validator/check/referer">
-                                <img
-                                    class="footer__social-icon"
-                                    style="border: 0; width: 88px; height: 31px"
-                                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-                                    alt="Valid CSS!" />
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- Social Media Links -->
-                </section>
-
-                <!-- Newsletter Section -->
-                <section class="footer__newsletter">
-                    <h3 class="footer__title">Latest news and chill stuff</h3>
-                    <p class="footer__newsletter-description">
-                        Stay connected! We will soon be available to cater to
-                        all your whimsically notions of fun.
-                    </p>
-
-                    <form class="footer__newsletter-form">
-                        <label
-                            for="email"
-                            class="footer__newsletter-label booking-widget__label--hidden"
-                            aria-label="Enter your email"
-                            >Enter your email:</label
-                        >
-                        <input
-                            class="footer__newsletter-input"
-                            aria-label="Enter your email"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="your-email@example.com"
-                            required />
-                        <button
-                            class="button button--bg-black button--wide"
-                            type="submit">
-                            GET ON THE LIST
-                        </button>
-                    </form>
-
-                    <p class="footer__newsletter-text">
-                        Submit,” you consent to receiving newsletters via email.
-                        <br />
-                        You can unsubscribe anytime. Read here about how we
-                        handle your personal data and your rights, and find info
-                        on cookies here.
-                    </p>
-                </section>
-
-                <!-- Follow Section -->
-                <section class="footer__follow">
-                    <h3 class="footer__title">Hang with us</h3>
-                    <figure class="footer__follow-img-container">
-                        <a href="https://instagram.com" target="_blank">
-                            <img
-                                class="footer__follow-img"
-                                src="./assets/photos/09a42897-af91-4d77-973e-affc7594a6af.jpg"
-                                alt="Two A-frame cabins in a mountain range credit: deepai"
-                        /></a>
-                    </figure>
-
-                    <button class="button button--no-border">FOLLOW US</button>
-                </section>
-            </footer>
         </div>
     </body>
 </html>
