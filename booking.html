@@ -23,7 +23,10 @@
         >
 
         <aside class="skip-link">
-            <a href="#skip-to-here" class="skip-link__button"
+            <a
+                aria-label="Skip to main-content"
+                href="#skip-to-here"
+                class="skip-link__button"
                 >Skip to main content</a
             >
         </aside>
@@ -32,7 +35,7 @@
             <header class="header">
                 <!--  Navbar fullscreen -->
                 <nav class="navbar">
-                    <a href="./about.html">
+                    <a aria-label="Navigate to homes page" href="./index.html">
                         <figure class="navbar__logo-container">
                             <img
                                 class="navbar__logo"
@@ -42,15 +45,28 @@
                     </a>
                     <ul class="navbar__list">
                         <li class="navbar__item">
-                            <a href="./index.html" class="navbar__link">HOME</a>
+                            <a
+                                aria-label="Navigate to Home page"
+                                href="./index.html"
+                                class="navbar__link"
+                                >HOME</a
+                            >
                         </li>
                         <li class="navbar__item">
-                            <a href="./about.html" class="navbar__link"
+                            <a
+                                aria-label="Navigate to about us page"
+                                href="./about.html"
+                                class="navbar__link"
                                 >ABOUT US</a
                             >
                         </li>
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">SERVICES</a>
+                            <a
+                                aria-label="Navigate to SERVICES page"
+                                href="#"
+                                class="navbar__link"
+                                >SERVICES</a
+                            >
                         </li>
                         <li class="navbar__item navbar__item--has-dropdown">
                             <a
@@ -59,7 +75,7 @@
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 aria-controls="cabins-dropdown"
-                                aria-label="Toggle cabins-dropdown"
+                                aria-label="Navigate to booking page and Toggle cabins-dropdown"
                                 role="button"
                                 >CABINS <i class="fas fa-chevron-down"></i
                             ></a>
@@ -71,12 +87,14 @@
                                 <li class="navbar__item navbar__item--dropdown">
                                     <a
                                         href="#"
+                                        aria-label="Navigate to booking page"
                                         class="navbar__link navbar__link--dropdown"
                                         >MOUNTAIN</a
                                     >
                                 </li>
                                 <li class="navbar__item navbar__item--dropdown">
                                     <a
+                                        aria-label="Navigate to booking page"
                                         href="#"
                                         class="navbar__link navbar__link--dropdown"
                                         >LAKE</a
@@ -85,7 +103,12 @@
                             </ul>
                         </li>
                         <li class="navbar__item">
-                            <a href="#" class="navbar__link">CONTACT US</a>
+                            <a
+                                aria-label="Navigate to Contact Us page"
+                                href="#"
+                                class="navbar__link"
+                                >CONTACT US</a
+                            >
                         </li>
                     </ul>
                 </nav>
@@ -134,7 +157,7 @@
                             <a
                                 class="menu__link"
                                 href="./index.html"
-                                aria-label="Navigate to planner page">
+                                aria-label="Navigate to HOME page">
                                 HOME
                             </a>
                         </li>
@@ -160,7 +183,7 @@
                                 href="#"
                                 aria-haspopup="true"
                                 aria-expanded="false"
-                                aria-label="menu-cabins-dropdown"
+                                aria-label="Navigate to booking page menu-cabins-dropdown item"
                                 aria-controls="menu-cabins-dropdown"
                                 role="button">
                                 <i class="fas fa-chevron-down"></i>
@@ -173,6 +196,7 @@
                                 <li class="menu__item menu__item--dropdown">
                                     <a
                                         href="#"
+                                        aria-label="Navigate to booking page"
                                         class="menu__link menu__link--dropdown"
                                         >MOUNTAIN</a
                                     >
@@ -180,6 +204,7 @@
                                 <li class="menu__item menu__item--dropdown">
                                     <a
                                         href="#"
+                                        aria-label="Navigate to booking page"
                                         class="menu__link menu__link--dropdown"
                                         >LAKE</a
                                     >
@@ -190,7 +215,7 @@
                             <a
                                 class="menu__link"
                                 href="#"
-                                aria-label="Navigate to tips page">
+                                aria-label="Navigate to contact page">
                                 CONTACT US
                             </a>
                         </li>
@@ -253,7 +278,7 @@
                                                 inline: true, // Always show the calendar
                                                 mode: "range", // Allow selecting a date range
                                                 minDate: "today", // Prevent past dates
-                                                dateFormat: "d-M-Y",
+                                                dateFormat: "    d-M-Y    ",
                                                 onChange: function (
                                                     selectedDates,
                                                     dateStr
@@ -458,7 +483,7 @@
                                         for 1 night
                                     </p>
                                     <button
-                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        class="button button--bg-black button--no-margin"
                                         aria-label="Select this package for 845 SEK per guest">
                                         SELECT
                                         <i class="fa fa-chevron-right"></i>
@@ -519,7 +544,7 @@
                                         for 1 night
                                     </p>
                                     <button
-                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        class="button button--bg-black button--no-margin"
                                         aria-label="Select this package for 845 SEK per guest">
                                         SELECT
                                         <i class="fa fa-chevron-right"></i>
@@ -581,7 +606,7 @@
                                         for 1 night
                                     </p>
                                     <button
-                                        class="button button--search-cabin booking-widget__input--no-border"
+                                        class="button button--search-cabin button--bg-black button--no-margin"
                                         aria-label="Select this package for 845 SEK per guest">
                                         SELECT
                                         <i class="fa fa-chevron-right"></i>
@@ -589,11 +614,12 @@
                                 </section>
                             </div>
                         </article>
+                        <a href="" class="to-top-link">TAKE ME TO THE TOP</a>
                     </section>
                 </div>
             </main>
 
-            <!-- FOOTER SECTION -->
+            <!-- to the top link -->
         </div>
     </body>
 </html>
