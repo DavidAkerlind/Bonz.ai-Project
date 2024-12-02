@@ -1102,14 +1102,14 @@ h4 {
 }
 
 .booking-widget__form--big .flatpickr-input[readonly] {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
     width: 100%;
     text-align: center;
     border-radius: 1px;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1ch;
-    word-spacing: 1.3ch;
+
     font-family: var(--font-poppins);
 }
 .booking-widget__form--big {
