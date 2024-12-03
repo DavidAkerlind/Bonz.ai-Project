@@ -108,7 +108,7 @@ a {
 
 /*  ====  Basic styling  ==== */
 
-.wrapper {
+.page-wrapper {
     width: 100vw;
 }
 
@@ -205,7 +205,7 @@ h4 {
 
 /* ==== Credit Link ===*/
 
-.img-credit-link {
+.credits {
     display: none;
 }
 
@@ -342,7 +342,7 @@ h4 {
     min-width: 100%;
     min-height: 100%;
     background-color: var(--color-dark-overlay);
-    background-image: url("./assets/photos/07-night.jpg");
+    background-image: url("./assets/photos/936.jpg");
     background-size: cover;
     color: var(--color-primary);
     transform: translateX(100%);
@@ -357,7 +357,7 @@ h4 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 900;
 }
 
@@ -374,11 +374,13 @@ h4 {
 
 .menu__link {
     font-weight: 100;
+    text-shadow: 2px 1px 4px var(--color-accent-lighter);
 }
 
 .menu__link--active {
     color: var(--color-accent);
     font-weight: 400;
+    text-shadow: none;
 }
 
 .menu__item:not(:first-child) .menu__link:hover {
@@ -930,7 +932,7 @@ h4 {
 .stats-section__title,
 .stats-section__description {
     grid-column: span 4;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
 }
 
 .stats-section__title {
@@ -940,6 +942,7 @@ h4 {
 .stats-section__description {
     font-size: 0.9rem;
     letter-spacing: 0.2ch;
+    padding-bottom: 2rem;
 }
 
 .stats-section__sub-title {
@@ -1087,7 +1090,6 @@ h4 {
 
 .main-content__booking-widget--big {
     flex-direction: column;
-
     max-height: 30rem;
     max-width: 22rem;
     position: sticky;
@@ -1160,14 +1162,21 @@ h4 {
     transition: all 0.3s ease-in-out;
     background: var(--color-primary);
     border-radius: 2px;
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.3);
     text-align: left;
+    transform: translateZ(0);
+}
+
+.package:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 16px var(--color-dark);
 }
 
 .package__image-wrapper {
-    flex: 1 1 40%;
+    flex: 1;
     position: relative;
     max-height: 35rem;
+    min-width: 15rem;
 }
 
 .package__image {
@@ -1250,13 +1259,10 @@ h4 {
 /*  ========================= */
 
 @media screen and (max-width: 1200px) {
-    .package {
+    /* .package {
         flex-direction: column;
-    }
+    } */
 
-    .package__image-wrapper {
-        max-height: 20rem;
-    }
     .main-content__booking-page {
         padding: 0 1.5rem;
     }
@@ -1386,9 +1392,8 @@ h4 {
     }
     .main-content__booking-widget--big {
         align-self: center;
-    }
-    .package__image {
-        height: 15rem;
+        position: relative;
+        top: 0;
     }
 
     .main-content__title-box {
@@ -1400,6 +1405,13 @@ h4 {
     .main-content__grid-section,
     .main-content__grid-section--more-gap {
         grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+    .package {
+        flex-direction: column;
+    }
+    .package__image-wrapper,
+    .package__image {
+        max-height: 15rem;
     }
 
     .hero--row {

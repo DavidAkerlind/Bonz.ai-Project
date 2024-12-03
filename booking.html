@@ -18,9 +18,12 @@
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     </head>
     <body>
-        <a class="img-credit-link" href="http://www.freepik.com"
-            >Designed by GarryKillian / Freepik</a
-        >
+        <aside class="credits">
+            <!-- Credit for the background pic on all pages -->
+            <a class="credits__img-link" href="http://www.freepik.com"
+                >Designed by GarryKillian / Freepik</a
+            >
+        </aside>
 
         <aside class="skip-link">
             <a
@@ -30,9 +33,8 @@
                 >Skip to main content</a
             >
         </aside>
-        <div class="wrapper">
-            <!-- Header / Hero Sec  tion -->
-            <header class="header">
+        <div class="page-wrapper">
+            <header class="page-wrapper__header">
                 <!--  Navbar fullscreen -->
                 <nav class="navbar">
                     <a aria-label="Navigate to homes page" href="./index.html">
@@ -116,111 +118,114 @@
                 <!--  Navbar Burger menu -->
 
                 <!-- Accessible Hamburger Menu -->
-                <input
-                    type="checkbox"
-                    class="menu__checkbox"
-                    id="menu-toggle"
-                    aria-hidden="true" />
-                <label
-                    tabindex="0"
-                    class="menu__button"
-                    for="menu-toggle"
-                    aria-label="Toggle navigation menu">
-                    <span
-                        role="button"
-                        class="menu__button-line"
-                        aria-label="Open burger menu (mobile only)"></span>
-                    <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD -->
-                </label>
+                <div class="menu">
+                    <input
+                        type="checkbox"
+                        class="menu__checkbox"
+                        id="menu-toggle"
+                        aria-hidden="true" />
+                    <label
+                        tabindex="0"
+                        class="menu__button"
+                        for="menu-toggle"
+                        aria-label="Toggle navigation menu">
+                        <span
+                            role="button"
+                            class="menu__button-line"
+                            aria-label="Open burger menu (mobile only)"></span>
+                        <!-- ADD JAVA SCRIPT TO MAKE THIS EXPAND WHEN ONLY USING KEYBOARD 
+                                 I could not find a way with only HTML and CSS-->
+                    </label>
 
-                <!-- Navigation Burger Menu -->
-                <nav
-                    class="menu__navigation"
-                    aria-label="Main Navigation"
-                    aria-expanded="false">
-                    <ul class="menu__list">
-                        <!-- Logo (if decorative, use aria-hidden) -->
-                        <li class="menu__item">
-                            <a
-                                aria-label="Back to home link"
-                                class="menu__link"
-                                href="./index.html">
-                                <img
-                                    aria-hidden="true"
-                                    class="menu__logo"
-                                    src="./assets/logo/bonz.ai-logo-white-symbol.png"
-                                    alt="bonz.ai logo"
-                            /></a>
-                        </li>
-                        <!-- Navigation Links -->
-                        <li class="menu__item">
-                            <a
-                                class="menu__link"
-                                href="./index.html"
-                                aria-label="Navigate to HOME page">
-                                HOME
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a
-                                class="menu__link"
-                                href="./about.html"
-                                aria-label="Navigate to ABOUT">
-                                ABOUT US
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a
-                                class="menu__link"
-                                href="#"
-                                aria-label="Navigate to SERVICES">
-                                SERVICES
-                            </a>
-                        </li>
-                        <li class="menu__item menu__item--has-dropdown">
-                            <a
-                                class="menu__link menu__link--active"
-                                href="#"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                aria-label="Navigate to booking page menu-cabins-dropdown item"
-                                aria-controls="menu-cabins-dropdown"
-                                role="button">
-                                <i class="fas fa-chevron-down"></i>
-                                CABINS
-                            </a>
-                            <ul
-                                id="menu-cabins-dropdown"
-                                class="menu__dropdown"
-                                aria-labelledby="menu-cabins-dropdown">
-                                <li class="menu__item menu__item--dropdown">
-                                    <a
-                                        href="#"
-                                        aria-label="Navigate to booking page"
-                                        class="menu__link menu__link--dropdown"
-                                        >MOUNTAIN</a
-                                    >
-                                </li>
-                                <li class="menu__item menu__item--dropdown">
-                                    <a
-                                        href="#"
-                                        aria-label="Navigate to booking page"
-                                        class="menu__link menu__link--dropdown"
-                                        >LAKE</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a
-                                class="menu__link"
-                                href="#"
-                                aria-label="Navigate to contact page">
-                                CONTACT US
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                    <!-- Navigation Burger Menu -->
+                    <nav
+                        class="menu__navigation"
+                        aria-label="Main Navigation on Mobile"
+                        aria-expanded="false">
+                        <ul class="menu__list">
+                            <!-- Logo (if decorative, use aria-hidden) -->
+                            <li class="menu__item">
+                                <a
+                                    aria-label="Back to home link"
+                                    class="menu__link"
+                                    href="./index.html">
+                                    <img
+                                        aria-hidden="true"
+                                        class="menu__logo"
+                                        src="./assets/logo/bonz.ai-logo-white-symbol.png"
+                                        alt="bonz.ai logo"
+                                /></a>
+                            </li>
+                            <!-- Navigation Links -->
+                            <li class="menu__item">
+                                <a
+                                    class="menu__link"
+                                    href="./index.html"
+                                    aria-label="Navigate to planner page">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a
+                                    class="menu__link"
+                                    href="./about.html"
+                                    aria-label="Navigate to ABOUT">
+                                    ABOUT US
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a
+                                    class="menu__link"
+                                    href="./index.html"
+                                    aria-label="Navigate to SERVICES">
+                                    SERVICES
+                                </a>
+                            </li>
+                            <li class="menu__item menu__item--has-dropdown">
+                                <a
+                                    class="menu__link menu__link--active"
+                                    href="./booking.html"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    aria-label="menu-cabins-dropdown and take me to booking cabins page"
+                                    aria-controls="menu-cabins-dropdown"
+                                    role="button">
+                                    <i class="fas fa-chevron-down"></i>
+                                    CABINS
+                                </a>
+                                <ul
+                                    id="menu-cabins-dropdown"
+                                    class="menu__dropdown"
+                                    aria-labelledby="menu-cabins-dropdown">
+                                    <li class="menu__item menu__item--dropdown">
+                                        <a
+                                            aria-label="Navigate to cabins in mountains page"
+                                            href="./booking.html"
+                                            class="menu__link menu__link--dropdown"
+                                            >MOUNTAIN</a
+                                        >
+                                    </li>
+                                    <li class="menu__item menu__item--dropdown">
+                                        <a
+                                            aria-label="Navigate to cabins on lake page"
+                                            href="./booking.html"
+                                            class="menu__link menu__link--dropdown"
+                                            >LAKE</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a
+                                    class="menu__link"
+                                    href="#"
+                                    aria-label="Navigate to contact page">
+                                    CONTACT US
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <!--  MAIN SECTION / CONTENT -->
@@ -237,7 +242,7 @@
                         You haven't chosen a date yet
                     </h2>
                 </section>
-                <div class="main-content__booking-page">
+                <section class="main-content__booking-page">
                     <!-- === BOOKING WIDGET BIG CALENDER ==== -->
 
                     <section
@@ -248,7 +253,11 @@
                             class="booking-widget__form booking-widget__form--big"
                             action="#"
                             id="Booking-widget-form">
-                            <!-- Calendar  I use divs for the custom date picker i am sorry -->
+                            <!-- Calendar -->
+                            <!-- I use divs for the custom date picker i am sorry!
+                              But i don't want so many section tags and it has no 
+                              h- or p-tag so it was not appropriate for article
+                             -->
                             <div class="booking-widget__date-picker">
                                 <fieldset
                                     id="skip-to-here"
@@ -430,14 +439,16 @@
 
                     <!-- ==== BOOKING PACKAGES SECTION ===== -->
                     <section class="main-content__booking-packages">
+                        <!-- I would maybe make this "<article class="package">" div with a aria label as booking package 
+                         both to not have so many articles inside articles but also for accessibility  -->
                         <article class="package">
-                            <div class="package__image-wrapper">
+                            <figure class="package__image-wrapper">
                                 <img
                                     src="./assets/photos/fb24277a-60b5-44ac-8fa1-f032a0675381.jpg"
                                     alt="Luxurious cabin by a lake credit: deepai"
                                     class="package__image" />
-                            </div>
-                            <div class="package__details">
+                            </figure>
+                            <article class="package__details">
                                 <h3 class="package__title">GRAND ESCAPE</h3>
                                 <p class="package__subtitle">
                                     <i class="fa fa-circle"></i> LUNCH
@@ -489,17 +500,17 @@
                                         <i class="fa fa-chevron-right"></i>
                                     </button>
                                 </section>
-                            </div>
+                            </article>
                         </article>
                         <article class="package">
-                            <div class="package__image-wrapper">
+                            <figure class="package__image-wrapper">
                                 <img
                                     src="./assets/photos/edb36771-2e2c-4d68-9606-a9fd961fb47b.jpg"
                                     alt="Luxurious cabin by a lake credit: deepai"
                                     class="package__image" />
-                            </div>
-                            <div class="package__details">
-                                <h3 class="package__title">GRAND ESCAPE</h3>
+                            </figure>
+                            <article class="package__details">
+                                <h3 class="package__title">SUNDOWN SOIRE</h3>
                                 <p class="package__subtitle">
                                     <i class="fa fa-circle"></i> LUNCH
                                     <i class="fa fa-circle"></i> BREAKFAST
@@ -550,17 +561,17 @@
                                         <i class="fa fa-chevron-right"></i>
                                     </button>
                                 </section>
-                            </div>
+                            </article>
                         </article>
                         <article class="package">
-                            <div class="package__image-wrapper">
+                            <figure class="package__image-wrapper">
                                 <img
                                     src="./assets/photos/03e6892d-f060-48a6-9521-921f046b52f5.jpg"
                                     alt="Luxurious cabin by a lake credit: deepai"
                                     class="package__image" />
-                            </div>
-                            <div class="package__details">
-                                <h3 class="package__title">GRAND ESCAPE</h3>
+                            </figure>
+                            <article class="package__details">
+                                <h3 class="package__title">TOTALLY RELAXED</h3>
                                 <p class="package__subtitle">
                                     <i class="fa fa-circle"></i> LUNCH
                                     <i class="fa fa-circle"></i> BREAKFAST
@@ -612,14 +623,13 @@
                                         <i class="fa fa-chevron-right"></i>
                                     </button>
                                 </section>
-                            </div>
+                            </article>
                         </article>
+                        <!-- to the top link -->
                         <a href="" class="to-top-link">TAKE ME TO THE TOP</a>
                     </section>
-                </div>
+                </section>
             </main>
-
-            <!-- to the top link -->
         </div>
     </body>
 </html>
